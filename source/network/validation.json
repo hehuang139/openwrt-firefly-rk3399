@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "count": 13,
+  "checks": [
+    "first boot LAN, DHCP range, LuCI language, HTTPS and loopback with real UCI",
+    "upstream firewall zones and rules retained, WAN masquerade/reject",
+    "single verified USB Ethernet auto-selects WAN",
+    "repeat events do not rewrite configuration",
+    "same USB adapter renumber follows MAC and preserves PPPoE credentials",
+    "second USB adapter does not displace established WAN",
+    "missing established adapter does not silently select another adapter",
+    "administrator WAN device override retained",
+    "built-in LAN, Wi-Fi and non-USB Ethernet cannot become WAN",
+    "ambiguous first-boot multiple USB adapters leave WAN unassigned",
+    "unsupported modem/net driver excluded",
+    "initialized marker preserves later custom and restored upgrade settings",
+    "foreign board receives no Firefly defaults"
+  ],
+  "environment": "Production shell bodies under host /bin/sh with only absolute sysfs/config paths redirected; real UCI CLI from pinned upstream commit66127cd76c5d0bd46d5a90302cc6110f53a4e2f8; temporary ordinary fake sysfs; logger and ubus mocked",
+  "uci_sha256": "10aab387b101ecfd118baebfdd03fc652a28ff2ae5a66c48bcae25e34f1f8026"
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "validation": [
+    "production validate_manifest",
+    "production verify_source: compressed hash, MBR, full raw hash, EOF"
+  ],
+  "image": "outputs/test1/openwrt-25.12.6-firefly-rk3399-emmc-test1.img.gz",
+  "raw_bytes": 637534208,
+  "raw_sha256": "00e2e63f71cac000ac3a45b32ef2acb218c0eca3f0cda301f06d410a407acfd3",
+  "devices_opened": false
+}

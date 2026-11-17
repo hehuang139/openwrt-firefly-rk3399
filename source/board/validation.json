@@ -1,0 +1,210 @@
+{
+  "result": "PASS",
+  "count": 39,
+  "linux": "6.12.112",
+  "dtb": {
+    "path": "work/board/rk3399-firefly-openwrt.dtb",
+    "bytes": 65507,
+    "sha256": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+  },
+  "checks": [
+    {
+      "name": "original-Firefly-compatible",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "UART2-1500000",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "Linux-SD-alias",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "Linux-eMMC-alias",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "MMC-enabled:/mmc@fe310000",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "MMC-enabled:/mmc@fe320000",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "MMC-enabled:/mmc@fe330000",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "MMC-enabled:/syscon@ff770000/phy@f780",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "eMMC-HS200",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "eMMC-200MHz-cap",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "eMMC-remove:mmc-hs400-1_8v",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "eMMC-remove:mmc-hs400-enhanced-strobe",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "USB-hub-reset-GPIO2A4-output-high",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "USB-reset-config-output-high",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "USB-regulator-includes-hub-reset",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "Linux6.12-native-FUSB302-match",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:assigned-clocks",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:assigned-clock-parents",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:clock_in_out",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:phy-supply",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:phy-mode",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:pinctrl-0",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:snps,reset-gpio",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:snps,reset-active-low",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:snps,reset-delays-us",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:tx_delay",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "retain-upstream-GMAC:rx_delay",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_DWMAC_ROCKCHIP",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_STMMAC_ETH",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_REALTEK_PHY",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_MMC_DW_ROCKCHIP",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_MMC_SDHCI_OF_ARASAN",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_PHY_ROCKCHIP_EMMC",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_USB_XHCI_HCD",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_USB_EHCI_HCD",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_USB_DWC3_HOST",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "release-builtin:CONFIG_TYPEC_FUSB302",
+      "result": "PASS",
+      "value": null
+    },
+    {
+      "name": "no-new-dtc-warnings",
+      "result": "PASS",
+      "value": {
+        "upstream": 10,
+        "adapted": 10
+      }
+    },
+    {
+      "name": "repeat-DTB-byte-identical",
+      "result": "PASS",
+      "value": null
+    }
+  ]
+}

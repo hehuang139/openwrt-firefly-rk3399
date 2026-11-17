@@ -1,0 +1,788 @@
+{
+  "result": "PASS",
+  "passed": 52,
+  "total": 52,
+  "environment": {
+    "emulator": "qemu-aarch64-static",
+    "cpu": "cortex-a72",
+    "rootfs": "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+    "writes": "Only ephemeral container temporary directories; project rootfs mount is read-only",
+    "network": "none"
+  },
+  "limitations": [
+    {
+      "program": "nft",
+      "detail": "QEMU user mode does not expose NETLINK_NETFILTER for the nft frontend constructor; the complete AArch64 ELF dependency closure is checked separately.",
+      "attempt": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/nft",
+          "--version"
+        ],
+        "exit_code": 3,
+        "stdout": "",
+        "stderr": "src/mnl.c:66: Unable to initialize Netlink socket: Protocol not supported\n"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "installed-source-parity:usr/sbin/firefly-install-emmc",
+      "pass": true,
+      "detail": {
+        "bytes": 15750,
+        "sha256": "d797aa8b00c5f489b6935e2cc67fd9c1de47baa2db8cac7d196d61087d545652",
+        "source": "source/flash/install-to-emmc.py"
+      }
+    },
+    {
+      "name": "installed-source-parity:etc/uci-defaults/99-firefly-router",
+      "pass": true,
+      "detail": {
+        "bytes": 3803,
+        "sha256": "3dfd60ea990e25552c83b7dd25c2891fa7fd929a05986168eb42711d9160abf8",
+        "source": "source/network/overlay/etc/uci-defaults/99-firefly-router"
+      }
+    },
+    {
+      "name": "installed-source-parity:usr/sbin/firefly-usb-wan",
+      "pass": true,
+      "detail": {
+        "bytes": 2856,
+        "sha256": "f8064dec31c1932ec149788ceac464e709d7c58edddc96178c1d368dd09be34a",
+        "source": "source/network/overlay/usr/sbin/firefly-usb-wan"
+      }
+    },
+    {
+      "name": "installed-source-parity:etc/hotplug.d/net/95-firefly-usb-wan",
+      "pass": true,
+      "detail": {
+        "bytes": 114,
+        "sha256": "5ca461488dcec04e0030357703ffbcf8b6f25bca080c33b0bb0efc0ec33d1ca7",
+        "source": "source/network/overlay/etc/hotplug.d/net/95-firefly-usb-wan"
+      }
+    },
+    {
+      "name": "busybox-ash-a72",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "-0",
+          "ash",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/bin/busybox",
+          "-c",
+          "x=7; [ \"$((x * 6))\" = 42 ] && printf \"A72 ash builtins PASS\\n\""
+        ],
+        "exit_code": 0,
+        "stdout": "A72 ash builtins PASS\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-version:usr/sbin/dnsmasq",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/dnsmasq",
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "Dnsmasq version 2.93  Copyright (c) 2000-2026 Simon Kelley\nCompile time options: IPv6 GNU-getopt no-DBus UBus no-i18n no-IDN DHCP no-DHCPv6 no-Lua TFTP no-conntrack no-ipset no-nftset no-auth no-DNSSEC no-ID loop-detect inotify dumpfile\n\nThis software comes with ABSOLUTELY NO WARRANTY.\nDnsmasq is free software, and you are welcome to redistribute it\nunder the terms of the GNU General Public License, version 2 or 3.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-version:usr/sbin/uhttpd",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/uhttpd",
+          "-h"
+        ],
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/uhttpd: option requires an argument: h\nUsage: /project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/uhttpd -p [addr:]port -h docroot\n\t-f              Do not fork to background\n\t-c file         Configuration file, default is '/etc/httpd.conf'\n\t-p [addr:]port  Bind to specified address and port, multiple allowed\n\t-s [addr:]port  Like -p but provide HTTPS on this port\n\t-C file         ASN.1 server certificate file\n\t-K file         ASN.1 server private key file\n\t-P ciphers      Colon separated list of allowed TLS ciphers\n\t-q              Redirect all HTTP requests to HTTPS\n\t-Q host=url     Redirect requests by SNI hostname to URL, -Q may be repeated\n\t-h directory    Specify the document root, default is '.'\n\t-E string       Use given virtual URL as 404 error handler\n\t-b string       Use given charset for directory listings, default to UTF-8\n\t-I string       Use given filename as index for directories, multiple allowed\n\t-S              Do not follow symbolic links outside of the docroot\n\t-D              Do not allow directory listings, send 403 instead\n\t-R              Enable RFC1918 filter\n\t-n count        Maximum allowed number of concurrent script requests\n\t-W count        Maximum concurrent script requests per source address\n\t                (default: half of -n rounded up; 0 disables the cap)\n\t-N count        Maximum allowed number of concurrent connections\n\t-l string       URL prefix for Lua handler\n\t-L file         Path to Lua handler script, -l and -L may be repeated in pairs\n\t-o string       URL prefix for ucode handler\n\t-O file         Path to ucode handler script, -o and -O may be repeated in pairs\n\t-u string       URL prefix for UBUS via JSON-RPC handler\n\t-U file         Override ubus socket path\n\t-a              Do not authenticate JSON-RPC requests against UBUS session api\n\t-X\t\tEnable CORS HTTP headers on JSON-RPC api\n\t-e\t\tEvents subscription reconnection time (retry value)\n\t-x string       URL prefix for CGI handler, default is '/cgi-bin'\n\t-y alias[=path]\tURL alias handle\n\t-i .ext=path    Use interpreter at path for files with the given extension\n\t-t seconds      CGI, Lua and UBUS script timeout in seconds, default is 60\n\t-T seconds      Network timeout in seconds, default is 30\n\t-k seconds      HTTP keepalive timeout\n\t-A seconds      TCP keepalive timeout, default is unset\n\t-d string       URL decode given string\n\t-r string       Specify basic auth realm\n\t-m string       MD5 crypt given string\n\n"
+      }
+    },
+    {
+      "name": "qemu-real-uci-parse",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/sbin/uci",
+          "-c",
+          "/tmp/firefly-runtime-er7ibk11/config",
+          "-t",
+          "/tmp/firefly-runtime-er7ibk11/delta",
+          "get",
+          "network.lan.ipaddr"
+        ],
+        "exit_code": 0,
+        "stdout": "192.168.50.1\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-python-version",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/bin/python3.13",
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "Python 3.13.18\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-python-installer-stdlib",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/bin/python3.13",
+          "-c",
+          "import datetime,fcntl,gzip,hashlib,json,os,pathlib,struct,sys,tempfile\nassert sys.version_info[:2] == (3,13)\nassert hashlib.sha256(b\"abc\").hexdigest() == \"ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad\"\nassert gzip.decompress(gzip.compress(b\"Firefly RK3399\")) == b\"Firefly RK3399\"\nassert struct.unpack(\"<I\", struct.pack(\"<I\",0xfc339901))[0] == 0xfc339901\nassert json.loads(json.dumps({\"board\":\"firefly-rk3399\"}))[\"board\"] == \"firefly-rk3399\"\nprint(\"Python installer stdlib PASS\",sys.version.split()[0])"
+        ],
+        "exit_code": 0,
+        "stdout": "Python installer stdlib PASS 3.13.18\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-installer-help",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/bin/python3.13",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/firefly-install-emmc",
+          "--help"
+        ],
+        "exit_code": 0,
+        "stdout": "usage: firefly-install-emmc [-h] [--image IMAGE] [--manifest MANIFEST]\n                            [--write] [--backup-dir BACKUP_DIR | --no-backup]\n\nInstall the matched OpenWrt Firefly image from TF to onboard eMMC. Default:\ninspect and verify only. --write requires either --backup-dir or --no-backup.\nTarget identification is fixed and cannot be overridden by CLI.\n\noptions:\n  -h, --help            show this help message and exit\n  --image IMAGE\n  --manifest MANIFEST\n  --write               Overwrite onboard eMMC after validation.\n  --backup-dir BACKUP_DIR\n                        Save and verify full original user-area backup before\n                        writing.\n  --no-backup           Explicitly overwrite without saving original data.\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-ash-syntax:etc/uci-defaults/99-firefly-router",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "-0",
+          "ash",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/bin/busybox",
+          "-n",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/etc/uci-defaults/99-firefly-router"
+        ],
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-ash-syntax:usr/sbin/firefly-usb-wan",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "-0",
+          "ash",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/bin/busybox",
+          "-n",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/usr/sbin/firefly-usb-wan"
+        ],
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "qemu-ash-syntax:etc/hotplug.d/net/95-firefly-usb-wan",
+      "pass": true,
+      "detail": {
+        "command": [
+          "qemu-aarch64-static",
+          "-cpu",
+          "cortex-a72",
+          "-L",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip",
+          "-0",
+          "ash",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/bin/busybox",
+          "-n",
+          "/project/work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/root-rockchip/etc/hotplug.d/net/95-firefly-usb-wan"
+        ],
+        "exit_code": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "name": "elf64-aarch64:bin/busybox",
+      "pass": true,
+      "detail": {
+        "bytes": 421909,
+        "sha256": "19d97bbe59f52a9321261ad3e795fca43bfac2212f18c351facb395c4740ccc0"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "dependency-closure:bin/busybox",
+      "pass": true,
+      "detail": {
+        "files": {
+          "bin/busybox": {
+            "sha256": "19d97bbe59f52a9321261ad3e795fca43bfac2212f18c351facb395c4740ccc0",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "elf64-aarch64:sbin/uci",
+      "pass": true,
+      "detail": {
+        "bytes": 16395,
+        "sha256": "805599851a8ee1b431034421ef0534d32eaf292179901dc5b850c0f140bc679a"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libubox.so.20260213",
+      "pass": true,
+      "detail": {
+        "bytes": 65633,
+        "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libuci.so.20250120",
+      "pass": true,
+      "detail": {
+        "bytes": 41050,
+        "sha256": "96bf2ecd673e89e0e1f2247145d68b7083f42da5f9daaef4b2ee85d8ef09275e"
+      }
+    },
+    {
+      "name": "dependency-closure:sbin/uci",
+      "pass": true,
+      "detail": {
+        "files": {
+          "sbin/uci": {
+            "sha256": "805599851a8ee1b431034421ef0534d32eaf292179901dc5b850c0f140bc679a",
+            "needed": [
+              "libuci.so.20250120",
+              "libubox.so.20260213",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          },
+          "lib/libubox.so.20260213": {
+            "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libuci.so.20250120": {
+            "sha256": "96bf2ecd673e89e0e1f2247145d68b7083f42da5f9daaef4b2ee85d8ef09275e",
+            "needed": [
+              "libubox.so.20260213",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/bin/python3.13",
+      "pass": true,
+      "detail": {
+        "bytes": 4059,
+        "sha256": "f5a087c9995b35d4d1ff6f229c4272efc36863c074ac6d3c8cb9cb311bd1e3f8"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libpython3.13.so.1.0",
+      "pass": true,
+      "detail": {
+        "bytes": 4190289,
+        "sha256": "bdbd09a7fec9b8c9f311dff188dd6b1e45e179a3aca64a3fb294db2b94fcd574"
+      }
+    },
+    {
+      "name": "dependency-closure:usr/bin/python3.13",
+      "pass": true,
+      "detail": {
+        "files": {
+          "usr/bin/python3.13": {
+            "sha256": "f5a087c9995b35d4d1ff6f229c4272efc36863c074ac6d3c8cb9cb311bd1e3f8",
+            "needed": [
+              "libpython3.13.so.1.0",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          },
+          "usr/lib/libpython3.13.so.1.0": {
+            "sha256": "bdbd09a7fec9b8c9f311dff188dd6b1e45e179a3aca64a3fb294db2b94fcd574",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/sbin/nft",
+      "pass": true,
+      "detail": {
+        "bytes": 12251,
+        "sha256": "b67f020f8fd6798c4b3d162351f7327bbe9e1adaf1a2418f6a1037f40e04ddcd"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libjansson.so.4.14.0",
+      "pass": true,
+      "detail": {
+        "bytes": 90195,
+        "sha256": "95d5f5d42e5bd484aed9b71b239b477d221ad270d1790a2f97033b88886dbef9"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libnftnl.so.11.7.0",
+      "pass": true,
+      "detail": {
+        "bytes": 202114,
+        "sha256": "c7908ea5b4117d0a3357bbf728a47a7df3c64f9e4d547d13efa5c3b6a289c05b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libmnl.so.0.2.0",
+      "pass": true,
+      "detail": {
+        "bytes": 20482,
+        "sha256": "5037e535c13ea22d6b9000408a9d5cb7eb458a423f479f6769f889ff3a5d5b5a"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libnftables.so.1.1.0",
+      "pass": true,
+      "detail": {
+        "bytes": 799699,
+        "sha256": "f10563a770d47b5f1defda32a06a0532d27bc49631f95d1df24e425210e5ebfe"
+      }
+    },
+    {
+      "name": "dependency-closure:usr/sbin/nft",
+      "pass": true,
+      "detail": {
+        "files": {
+          "usr/sbin/nft": {
+            "sha256": "b67f020f8fd6798c4b3d162351f7327bbe9e1adaf1a2418f6a1037f40e04ddcd",
+            "needed": [
+              "libnftables.so.1",
+              "libmnl.so.0",
+              "libnftnl.so.11",
+              "libjansson.so.4",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          },
+          "usr/lib/libjansson.so.4.14.0": {
+            "sha256": "95d5f5d42e5bd484aed9b71b239b477d221ad270d1790a2f97033b88886dbef9",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "usr/lib/libnftnl.so.11.7.0": {
+            "sha256": "c7908ea5b4117d0a3357bbf728a47a7df3c64f9e4d547d13efa5c3b6a289c05b",
+            "needed": [
+              "libmnl.so.0",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "usr/lib/libmnl.so.0.2.0": {
+            "sha256": "5037e535c13ea22d6b9000408a9d5cb7eb458a423f479f6769f889ff3a5d5b5a",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "usr/lib/libnftables.so.1.1.0": {
+            "sha256": "f10563a770d47b5f1defda32a06a0532d27bc49631f95d1df24e425210e5ebfe",
+            "needed": [
+              "libmnl.so.0",
+              "libnftnl.so.11",
+              "libjansson.so.4",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/sbin/uhttpd",
+      "pass": true,
+      "detail": {
+        "bytes": 62418,
+        "sha256": "20e595b34dbc2f1d8ca3169a96ce547487334f41ed4089d8ed5045f5fd674330"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/lib/libjson-c.so.5.4.0",
+      "pass": true,
+      "detail": {
+        "bytes": 73782,
+        "sha256": "b49294d311e719185c395343f7e2668d26ada81c97290d98bd9bb01f4768fb60"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libblobmsg_json.so.20260213",
+      "pass": true,
+      "detail": {
+        "bytes": 12290,
+        "sha256": "02c83eb0dd7ebe18d3e7dfdb09da0538968de9d28f43bf592247d467f7442f09"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libubox.so.20260213",
+      "pass": true,
+      "detail": {
+        "bytes": 65633,
+        "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libjson_script.so.20260213",
+      "pass": true,
+      "detail": {
+        "bytes": 12305,
+        "sha256": "5dcb2d41c49beaa9c7cbebdcf1590cbeb4a02f65504eb7d7ba343beb74602329"
+      }
+    },
+    {
+      "name": "dependency-closure:usr/sbin/uhttpd",
+      "pass": true,
+      "detail": {
+        "files": {
+          "usr/sbin/uhttpd": {
+            "sha256": "20e595b34dbc2f1d8ca3169a96ce547487334f41ed4089d8ed5045f5fd674330",
+            "needed": [
+              "libubox.so.20260213",
+              "libjson_script.so.20260213",
+              "libblobmsg_json.so.20260213",
+              "libjson-c.so.5",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          },
+          "usr/lib/libjson-c.so.5.4.0": {
+            "sha256": "b49294d311e719185c395343f7e2668d26ada81c97290d98bd9bb01f4768fb60",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libblobmsg_json.so.20260213": {
+            "sha256": "02c83eb0dd7ebe18d3e7dfdb09da0538968de9d28f43bf592247d467f7442f09",
+            "needed": [
+              "libubox.so.20260213",
+              "libjson-c.so.5",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libubox.so.20260213": {
+            "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libjson_script.so.20260213": {
+            "sha256": "5dcb2d41c49beaa9c7cbebdcf1590cbeb4a02f65504eb7d7ba343beb74602329",
+            "needed": [
+              "libubox.so.20260213",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "elf64-aarch64:usr/sbin/dnsmasq",
+      "pass": true,
+      "detail": {
+        "bytes": 269305,
+        "sha256": "0d4c2101b762e1001979eb6400019cdbf17866e755db3cfb3ff5369e5ddb6578"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libc.so",
+      "pass": true,
+      "detail": {
+        "bytes": 590852,
+        "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libgcc_s.so.1",
+      "pass": true,
+      "detail": {
+        "bytes": 131088,
+        "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libubus.so.20251202",
+      "pass": true,
+      "detail": {
+        "bytes": 28834,
+        "sha256": "a16e7acf8146e018ba9d1a5e37233be4698f2b7cc0bb36265ce7e2d1276daeaa"
+      }
+    },
+    {
+      "name": "elf64-aarch64:lib/libubox.so.20260213",
+      "pass": true,
+      "detail": {
+        "bytes": 65633,
+        "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8"
+      }
+    },
+    {
+      "name": "dependency-closure:usr/sbin/dnsmasq",
+      "pass": true,
+      "detail": {
+        "files": {
+          "usr/sbin/dnsmasq": {
+            "sha256": "0d4c2101b762e1001979eb6400019cdbf17866e755db3cfb3ff5369e5ddb6578",
+            "needed": [
+              "libubox.so.20260213",
+              "libubus.so.20251202",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libc.so": {
+            "sha256": "df69305a63ff7a94dc870e159f9211b725eec8cafb0c4c7428cfbcb5df99b8b2",
+            "needed": []
+          },
+          "lib/libgcc_s.so.1": {
+            "sha256": "68c85e8a82ada65f434f2295e234ffaf52217067b4929eb4e5a78f413233417b",
+            "needed": [
+              "libc.so"
+            ]
+          },
+          "lib/libubus.so.20251202": {
+            "sha256": "a16e7acf8146e018ba9d1a5e37233be4698f2b7cc0bb36265ce7e2d1276daeaa",
+            "needed": [
+              "libubox.so.20260213",
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          },
+          "lib/libubox.so.20260213": {
+            "sha256": "d1004f7d5afb66bf162d3382056f733b0623e833d82bb8a6a6fb5714b000d2c8",
+            "needed": [
+              "libgcc_s.so.1",
+              "libc.so"
+            ]
+          }
+        },
+        "missing": []
+      }
+    },
+    {
+      "name": "rootfs-release",
+      "pass": true,
+      "detail": "DISTRIB_ID='OpenWrt'\nDISTRIB_RELEASE='25.12.6'\nDISTRIB_REVISION='r33311-981c978eff'\nDISTRIB_TARGET='rockchip/armv8'\nDISTRIB_ARCH='aarch64_generic'\nDISTRIB_DESCRIPTION='OpenWrt 25.12.6 r33311-981c978eff'\nDISTRIB_TAINTS=''\n"
+    }
+  ]
+}

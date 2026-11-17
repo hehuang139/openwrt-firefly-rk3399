@@ -1,0 +1,111 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Initial Firefly router policy. OpenWrt removes successful uci-defaults scripts.
+case "$(cat /tmp/sysinfo/board_name 2>/dev/null)" in
+    firefly,firefly-rk3399) ;;
+    *) exit 0 ;;
+esac
+[ "$(uci -q get firefly_router.main.initialized)" = 1 ] && exit 0
+
+# Locate existing zones rather than adding a second lan/wan zone.
+zone_by_name() {
+    uci -q show firewall | sed -n "s/^firewall\.\([^=]*\)\.name='$1'$/\1/p"
+}
+bridge=$(uci -q show network | sed -n "s/^network\.\([^=]*\)\.name='br-lan'$/\1/p")
+[ "$(printf '%s\n' "$bridge" | sed '/^$/d' | wc -l)" -le 1 ] || exit 1
+[ -n "$bridge" ] || bridge=firefly_lan
+[ -e /etc/config/firefly_router ] || : > /etc/config/firefly_router
+lan_zone=$(zone_by_name lan)
+wan_zone=$(zone_by_name wan)
+# Multiple zones with the same name are not safe to guess around.
+[ "$(printf '%s\n' "$lan_zone" | sed '/^$/d' | wc -l)" -le 1 ] || exit 1
+[ "$(printf '%s\n' "$wan_zone" | sed '/^$/d' | wc -l)" -le 1 ] || exit 1
+[ -n "$lan_zone" ] || lan_zone=firefly_lan
+[ -n "$wan_zone" ] || wan_zone=firefly_wan
+
+uci -q batch <<EOF
+set network.$bridge=device
+set network.$bridge.name='br-lan'
+set network.$bridge.type='bridge'
+delete network.$bridge.ports
+add_list network.$bridge.ports='eth0'
+set network.lan=interface
+set network.lan.device='br-lan'
+set network.lan.proto='static'
+set network.lan.ipaddr='192.168.50.1'
+set network.lan.netmask='255.255.255.0'
+set network.lan.ip6assign='60'
+delete network.lan.ifname
+delete network.lan.gateway
+delete network.lan.dns
+set network.wan=interface
+set network.wan.proto='dhcp'
+delete network.wan.device
+delete network.wan.ifname
+set network.wan6=interface
+set network.wan6.device='@wan'
+set network.wan6.proto='dhcpv6'
+set dhcp.lan=dhcp
+set dhcp.lan.interface='lan'
+set dhcp.lan.start='100'
+set dhcp.lan.limit='150'
+set dhcp.lan.leasetime='12h'
+set dhcp.lan.dhcpv4='server'
+set dhcp.lan.dhcpv6='server'
+set dhcp.lan.ra='server'
+delete dhcp.lan.ignore
+set dhcp.wan=dhcp
+set dhcp.wan.interface='wan'
+set dhcp.wan.ignore='1'
+set firewall.$lan_zone=zone
+set firewall.$lan_zone.name='lan'
+delete firewall.$lan_zone.network
+add_list firewall.$lan_zone.network='lan'
+set firewall.$lan_zone.input='ACCEPT'
+set firewall.$lan_zone.output='ACCEPT'
+set firewall.$lan_zone.forward='ACCEPT'
+set firewall.$wan_zone=zone
+set firewall.$wan_zone.name='wan'
+delete firewall.$wan_zone.network
+add_list firewall.$wan_zone.network='wan'
+add_list firewall.$wan_zone.network='wan6'
+set firewall.$wan_zone.input='REJECT'
+set firewall.$wan_zone.output='ACCEPT'
+set firewall.$wan_zone.forward='REJECT'
+set firewall.$wan_zone.masq='1'
+set firewall.$wan_zone.mtu_fix='1'
+set firefly_router.main=router
+set firefly_router.main.usb_wan_autoselect='1'
+set firefly_router.main.initialized='1'
+commit network
+commit dhcp
+commit firewall
+commit firefly_router
+EOF
+[ "$?" = 0 ] || exit 1
+# Existing upstream lan->wan forwarding and default DHCP/ICMP/IPv6 rules remain.
+forwarding=$(uci -q show firewall | sed -n "s/^firewall\.\([^=]*\)\.src='lan'$/\1/p")
+has_forward=0
+for section in $forwarding; do
+    [ "$(uci -q get "firewall.$section")" = forwarding ] || continue
+    [ "$(uci -q get "firewall.$section.dest")" = wan ] && has_forward=1
+done
+if [ "$has_forward" = 0 ]; then
+    uci -q batch <<EOF
+set firewall.firefly_lan_wan=forwarding
+set firewall.firefly_lan_wan.src='lan'
+set firewall.firefly_lan_wan.dest='wan'
+commit firewall
+EOF
+fi
+uci -q set 'system.@system[0].hostname=Firefly-RK3399-OpenWrt'
+uci -q commit system
+uci -q set 'luci.main.lang=zh_cn'
+uci -q commit luci
+if uci -q get uhttpd.main >/dev/null; then
+    uci -q set uhttpd.main.redirect_https=1
+    uci -q commit uhttpd
+fi
+# Netifd may not be running yet. It reads the selected device when it starts.
+/usr/sbin/firefly-usb-wan >/dev/null 2>&1 || true
+exit 0

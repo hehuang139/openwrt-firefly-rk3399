@@ -1,0 +1,534 @@
+{
+  "result": "PASS",
+  "count": 87,
+  "uboot": "2025.10",
+  "tf_a": "2.13",
+  "board": "Original Firefly RK3399 DDR3",
+  "environment": "nowhere",
+  "placement_bytes": {
+    "idbloader.img": 32768,
+    "u-boot.itb": 8388608,
+    "u-boot-rockchip.bin": 32768
+  },
+  "assets": {
+    "sd": [
+      {
+        "path": "work/boot-native/assets/sd/built.config",
+        "name": "built.config",
+        "bytes": 64373,
+        "sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27"
+      },
+      {
+        "path": "work/boot-native/assets/sd/fit-list.txt",
+        "name": "fit-list.txt",
+        "bytes": 3073,
+        "sha256": "d26e98134f50731e8737344b4c1c0e05ee0508711a3d6d820685783cdab1c8f3"
+      },
+      {
+        "path": "work/boot-native/assets/sd/idbloader.img",
+        "name": "idbloader.img",
+        "bytes": 163840,
+        "sha256": "8473cfa2ee14427529bcad1d042d4302baa5cc4ca7db5a23059c493dcd901a1b"
+      },
+      {
+        "path": "work/boot-native/assets/sd/u-boot-rockchip.bin",
+        "name": "u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+      },
+      {
+        "path": "work/boot-native/assets/sd/u-boot.dtb",
+        "name": "u-boot.dtb",
+        "bytes": 98776,
+        "sha256": "43dd87bf548dd4667f956da0318c97705430a1c9ee7099ab758a3660d30a9e9c"
+      },
+      {
+        "path": "work/boot-native/assets/sd/u-boot.itb",
+        "name": "u-boot.itb",
+        "bytes": 1101824,
+        "sha256": "055fb8c8df561f1c2294814996ead9a9a3307acae7813df84cece3b141ff5166"
+      }
+    ],
+    "emmc": [
+      {
+        "path": "work/boot-native/assets/emmc/built.config",
+        "name": "built.config",
+        "bytes": 64373,
+        "sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27"
+      },
+      {
+        "path": "work/boot-native/assets/emmc/fit-list.txt",
+        "name": "fit-list.txt",
+        "bytes": 3073,
+        "sha256": "5873db257b66462fc12a82ab57f111a2f1db71b214b4916b929d6f42c5a6008e"
+      },
+      {
+        "path": "work/boot-native/assets/emmc/idbloader.img",
+        "name": "idbloader.img",
+        "bytes": 163840,
+        "sha256": "a61291fdb95806de79759e88c5e546a8bc91127e2e3ae6f0d4c7bfa143f4603e"
+      },
+      {
+        "path": "work/boot-native/assets/emmc/u-boot-rockchip.bin",
+        "name": "u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f"
+      },
+      {
+        "path": "work/boot-native/assets/emmc/u-boot.dtb",
+        "name": "u-boot.dtb",
+        "bytes": 98776,
+        "sha256": "077fdbfc1f0c7a243c7914a992c76a454b863855a688b290ade5d2e41abe8233"
+      },
+      {
+        "path": "work/boot-native/assets/emmc/u-boot.itb",
+        "name": "u-boot.itb",
+        "bytes": 1101824,
+        "sha256": "e1288e548d86632390ecd509a41843f08d7861935ae13603d5325e135513a3ee"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "sd:config:CONFIG_ARM64",
+      "result": "PASS",
+      "detail": "CONFIG_ARM64=y"
+    },
+    {
+      "name": "sd:config:CONFIG_ROCKCHIP_RK3399",
+      "result": "PASS",
+      "detail": "CONFIG_ROCKCHIP_RK3399=y"
+    },
+    {
+      "name": "sd:config:CONFIG_DEFAULT_DEVICE_TREE",
+      "result": "PASS",
+      "detail": "CONFIG_DEFAULT_DEVICE_TREE=\"rockchip/rk3399-firefly\""
+    },
+    {
+      "name": "sd:config:CONFIG_TPL",
+      "result": "PASS",
+      "detail": "CONFIG_TPL=y"
+    },
+    {
+      "name": "sd:config:CONFIG_SPL",
+      "result": "PASS",
+      "detail": "CONFIG_SPL=y"
+    },
+    {
+      "name": "sd:config:CONFIG_ENV_IS_NOWHERE",
+      "result": "PASS",
+      "detail": "CONFIG_ENV_IS_NOWHERE=y"
+    },
+    {
+      "name": "sd:config:# CONFIG_ENV_IS_IN_MMC is not set",
+      "result": "PASS",
+      "detail": "# CONFIG_ENV_IS_IN_MMC is not set"
+    },
+    {
+      "name": "sd:config:# CONFIG_VIDEO is not set",
+      "result": "PASS",
+      "detail": "# CONFIG_VIDEO is not set"
+    },
+    {
+      "name": "sd:config:CONFIG_BAUDRATE",
+      "result": "PASS",
+      "detail": "CONFIG_BAUDRATE=1500000"
+    },
+    {
+      "name": "sd:config:CONFIG_CMD_BOOTM",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_BOOTM=y"
+    },
+    {
+      "name": "sd:config:CONFIG_CMD_SOURCE",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_SOURCE=y"
+    },
+    {
+      "name": "sd:config:CONFIG_CMD_PART",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_PART=y"
+    },
+    {
+      "name": "sd:config:CONFIG_CMD_FAT",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_FAT=y"
+    },
+    {
+      "name": "sd:config:CONFIG_CMD_EXT4",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_EXT4=y"
+    },
+    {
+      "name": "sd:config:CONFIG_LZMA",
+      "result": "PASS",
+      "detail": "CONFIG_LZMA=y"
+    },
+    {
+      "name": "sd:config:CONFIG_FIT",
+      "result": "PASS",
+      "detail": "CONFIG_FIT=y"
+    },
+    {
+      "name": "sd:no-external-DDR-TPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:no-HS200-HS400",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:native-Firefly:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:UBoot-eMMC-mmc0:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:UBoot-SD-mmc1:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:52MHz-eMMC:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:no-HS400:u-boot.dtb:mmc-hs400-1_8v",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:no-HS400:u-boot.dtb:mmc-hs400-enhanced-strobe",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:native-Firefly:spl/u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:UBoot-eMMC-mmc0:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:UBoot-SD-mmc1:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:52MHz-eMMC:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:no-HS400:u-boot-spl.dtb:mmc-hs400-1_8v",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:no-HS400:u-boot-spl.dtb:mmc-hs400-enhanced-strobe",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:SPL-reads-own-medium",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:U-Boot-targets",
+      "result": "PASS",
+      "detail": "boot_targets=mmc1"
+    },
+    {
+      "name": "sd:bootscript-scanning",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:native-DDR3-800MHz",
+      "result": "PASS",
+      "detail": [
+        800,
+        3
+      ]
+    },
+    {
+      "name": "sd:idb-at-LBA64",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:FIT-at-LBA16384",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:FIT-fits-before32MiB",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:idb-has-TPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:idb-has-SPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:FIT-has-U-Boot",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:FIT-has-Firefly-DTB",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sd:FIT-ATF-and-Firefly",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:config:CONFIG_ARM64",
+      "result": "PASS",
+      "detail": "CONFIG_ARM64=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_ROCKCHIP_RK3399",
+      "result": "PASS",
+      "detail": "CONFIG_ROCKCHIP_RK3399=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_DEFAULT_DEVICE_TREE",
+      "result": "PASS",
+      "detail": "CONFIG_DEFAULT_DEVICE_TREE=\"rockchip/rk3399-firefly\""
+    },
+    {
+      "name": "emmc:config:CONFIG_TPL",
+      "result": "PASS",
+      "detail": "CONFIG_TPL=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_SPL",
+      "result": "PASS",
+      "detail": "CONFIG_SPL=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_ENV_IS_NOWHERE",
+      "result": "PASS",
+      "detail": "CONFIG_ENV_IS_NOWHERE=y"
+    },
+    {
+      "name": "emmc:config:# CONFIG_ENV_IS_IN_MMC is not set",
+      "result": "PASS",
+      "detail": "# CONFIG_ENV_IS_IN_MMC is not set"
+    },
+    {
+      "name": "emmc:config:# CONFIG_VIDEO is not set",
+      "result": "PASS",
+      "detail": "# CONFIG_VIDEO is not set"
+    },
+    {
+      "name": "emmc:config:CONFIG_BAUDRATE",
+      "result": "PASS",
+      "detail": "CONFIG_BAUDRATE=1500000"
+    },
+    {
+      "name": "emmc:config:CONFIG_CMD_BOOTM",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_BOOTM=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_CMD_SOURCE",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_SOURCE=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_CMD_PART",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_PART=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_CMD_FAT",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_FAT=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_CMD_EXT4",
+      "result": "PASS",
+      "detail": "CONFIG_CMD_EXT4=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_LZMA",
+      "result": "PASS",
+      "detail": "CONFIG_LZMA=y"
+    },
+    {
+      "name": "emmc:config:CONFIG_FIT",
+      "result": "PASS",
+      "detail": "CONFIG_FIT=y"
+    },
+    {
+      "name": "emmc:no-external-DDR-TPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:no-HS200-HS400",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:native-Firefly:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:UBoot-eMMC-mmc0:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:UBoot-SD-mmc1:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:52MHz-eMMC:u-boot.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:no-HS400:u-boot.dtb:mmc-hs400-1_8v",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:no-HS400:u-boot.dtb:mmc-hs400-enhanced-strobe",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:native-Firefly:spl/u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:UBoot-eMMC-mmc0:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:UBoot-SD-mmc1:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:52MHz-eMMC:u-boot-spl.dtb",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:no-HS400:u-boot-spl.dtb:mmc-hs400-1_8v",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:no-HS400:u-boot-spl.dtb:mmc-hs400-enhanced-strobe",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:SPL-reads-own-medium",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:U-Boot-targets",
+      "result": "PASS",
+      "detail": "boot_targets=mmc1 mmc0"
+    },
+    {
+      "name": "emmc:bootscript-scanning",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:native-DDR3-800MHz",
+      "result": "PASS",
+      "detail": [
+        800,
+        3
+      ]
+    },
+    {
+      "name": "emmc:idb-at-LBA64",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:FIT-at-LBA16384",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:FIT-fits-before32MiB",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:idb-has-TPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:idb-has-SPL",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:FIT-has-U-Boot",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:FIT-has-Firefly-DTB",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "emmc:FIT-ATF-and-Firefly",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "TF-A-Cortex-M0:rk3399m0",
+      "result": "PASS",
+      "detail": "ELF32 ARM ET_EXEC"
+    },
+    {
+      "name": "TF-A-Cortex-M0:rk3399m0pmu",
+      "result": "PASS",
+      "detail": "ELF32 ARM ET_EXEC"
+    },
+    {
+      "name": "TF-A-BL31-AArch64",
+      "result": "PASS",
+      "detail": null
+    }
+  ]
+}

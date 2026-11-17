@@ -1,0 +1,95 @@
+{
+  "upstream_uci_commit": "66127cd76c5d0bd46d5a90302cc6110f53a4e2f8",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 527,
+      "mode": "0o664",
+      "sha256": "686dbbec4251aab80a25499a442121d697adf27eda8ef4d33aace2d1fc59a110"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2615,
+      "mode": "0o664",
+      "sha256": "0b307fa7a6c7b8b6cddb67ed6faae6083f82566e9601c0ef6e456a062dcbc04b"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 1455,
+      "mode": "0o664",
+      "sha256": "d96bb60a5998428bb982f87c5f5272b2cf93d7898bc2815d61bd3284b1c84204"
+    },
+    {
+      "path": "overlay/etc/hotplug.d/net/95-firefly-usb-wan",
+      "bytes": 114,
+      "mode": "0o755",
+      "sha256": "5ca461488dcec04e0030357703ffbcf8b6f25bca080c33b0bb0efc0ec33d1ca7"
+    },
+    {
+      "path": "overlay/etc/uci-defaults/99-firefly-router",
+      "bytes": 3803,
+      "mode": "0o755",
+      "sha256": "3dfd60ea990e25552c83b7dd25c2891fa7fd929a05986168eb42711d9160abf8"
+    },
+    {
+      "path": "overlay/usr/sbin/firefly-usb-wan",
+      "bytes": 2856,
+      "mode": "0o755",
+      "sha256": "f8064dec31c1932ec149788ceac464e709d7c58edddc96178c1d368dd09be34a"
+    },
+    {
+      "path": "packages.txt",
+      "bytes": 181,
+      "mode": "0o664",
+      "sha256": "debceb89c9e77331dffcf656c621459b8312f950c11a2d8dd7d6b34fc0c40911"
+    },
+    {
+      "path": "tests/build-native-uci.py",
+      "bytes": 1168,
+      "mode": "0o664",
+      "sha256": "70711464adae0edbdaeb389a4c89d7db77fb7146ca22a8241999f105867515b1"
+    },
+    {
+      "path": "tests/test-network.py",
+      "bytes": 8114,
+      "mode": "0o664",
+      "sha256": "7ec328e76e81db480cb7a2e7066af709c0d6fa5e21ac1519dd44a8206a171a2e"
+    },
+    {
+      "path": "upstream/firewall.config",
+      "bytes": 4621,
+      "mode": "0o664",
+      "sha256": "02429d9c315c5572f0d3119e7e3fdd8e651b33e6151d419c52c62d5a6cc3230f"
+    },
+    {
+      "path": "upstream/functions.sh",
+      "bytes": 12546,
+      "mode": "0o664",
+      "sha256": "9517db82e694624559c41f3773f3f18bf5d3cd1b0ffc41bfb514fa2c08d08062"
+    },
+    {
+      "path": "upstream/luci.config",
+      "bytes": 687,
+      "mode": "0o664",
+      "sha256": "60078f7c02ed91d23092c9b75cb9ea5c8ee39f7727def813c8201f8e48a296f4"
+    },
+    {
+      "path": "upstream/uci-66127cd7.tar.gz",
+      "bytes": 61311,
+      "mode": "0o664",
+      "sha256": "3c29f63e67c548e2662c77814e1c692cef99926ebe135fc6a185ca925d4b0abe"
+    },
+    {
+      "path": "upstream/uci-Makefile",
+      "bytes": 2140,
+      "mode": "0o664",
+      "sha256": "548a58ea67abe65de6482e3eef8c6d044f6e65c351b092b3c3ee07216d98d055"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 1222,
+      "mode": "0o664",
+      "sha256": "a0b47acab9b5e46d08dcc530283380b4ac55d714bc04da5fc2ae80d3a5d45e79"
+    }
+  ]
+}

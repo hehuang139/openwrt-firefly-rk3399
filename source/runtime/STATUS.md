@@ -1,0 +1,1 @@
+FROZEN: final rebuilt rootfs checked read-only under Cortex-A72 QEMU. 52/52 PASS; actual nft user-mode Netlink limitation recorded in validation.json. The installed installer and all three network scripts match final production source hashes. No rootfs files modified.

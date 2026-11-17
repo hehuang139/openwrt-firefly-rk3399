@@ -1,0 +1,24 @@
+{
+  "checked_on": "2026-11-17",
+  "sources": {
+    "homepage": "https://openwrt.org/",
+    "profiles": "https://downloads.openwrt.org/releases/25.12.6/targets/rockchip/armv8/profiles.json",
+    "build_config": "https://downloads.openwrt.org/releases/25.12.6/targets/rockchip/armv8/config.buildinfo"
+  },
+  "homepage_excerpt": "Current stable release - OpenWrt 25.12.6; released on 18th October 2026",
+  "official_metadata": {
+    "version_number": "25.12.6",
+    "version_code": "r33311-981c978eff",
+    "target": "rockchip/armv8",
+    "arch_packages": "aarch64_generic",
+    "linux_kernel": {
+      "release": "1",
+      "vermagic": "5eacf764ba9415e5d7ff4aecb2e45c4d",
+      "version": "6.12.112"
+    }
+  },
+  "firefly_profiles": [
+    "firefly_roc-rk3328-cc"
+  ],
+  "profiles_sha256": "f57f7e55a448705b93931972ec620b5a9d45247782d938cf4cef1f8e67599b63"
+}

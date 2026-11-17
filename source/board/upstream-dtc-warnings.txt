@@ -1,0 +1,13 @@
+work/board/upstream.pp.dts:475.26-508.4: Warning (unit_address_vs_reg): /usb@fe800000: node has a unit name, but no reg or ranges property
+  also defined at work/board/upstream.pp.dts:3527.12-3529.3
+work/board/upstream.pp.dts:509.26-542.4: Warning (unit_address_vs_reg): /usb@fe900000: node has a unit name, but no reg or ranges property
+  also defined at work/board/upstream.pp.dts:3534.12-3536.3
+work/board/upstream.pp.dts:1848.25-1882.4: Warning (avoid_unnecessary_addr_size): /dsi@ff960000: unnecessary #address-cells/#size-cells without "ranges" or child "reg" property
+work/board/upstream.pp.dts:1883.26-1918.4: Warning (avoid_unnecessary_addr_size): /dsi@ff968000: unnecessary #address-cells/#size-cells without "ranges" or child "reg" property
+work/board/upstream.pp.dts:253.23-297.4: Warning (unique_unit_address): /pcie@f8000000: duplicate unit-address (also used in node /pcie-ep@f8000000)
+  also defined at work/board/upstream.pp.dts:3316.8-3322.3
+work/board/upstream.pp.dts:1973.24-1982.5: Warning (interrupt_provider): /pinctrl/gpio@ff720000: Missing #address-cells in interrupt provider
+work/board/upstream.pp.dts:1983.24-1992.5: Warning (interrupt_provider): /pinctrl/gpio@ff730000: Missing #address-cells in interrupt provider
+work/board/upstream.pp.dts:1993.24-2002.5: Warning (interrupt_provider): /pinctrl/gpio@ff780000: Missing #address-cells in interrupt provider
+work/board/upstream.pp.dts:2003.24-2012.5: Warning (interrupt_provider): /pinctrl/gpio@ff788000: Missing #address-cells in interrupt provider
+work/board/upstream.pp.dts:2013.24-2022.5: Warning (interrupt_provider): /pinctrl/gpio@ff790000: Missing #address-cells in interrupt provider

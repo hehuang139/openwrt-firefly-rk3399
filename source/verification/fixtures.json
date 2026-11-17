@@ -1,0 +1,87 @@
+{
+  "result": "PASS",
+  "count": 20,
+  "checks": [
+    {
+      "name": "pure-gzip-install-payload",
+      "result": "PASS"
+    },
+    {
+      "name": "missing-fwtool-footer",
+      "result": "PASS"
+    },
+    {
+      "name": "install-payload-rejects-trailing-footer",
+      "result": "PASS"
+    },
+    {
+      "name": "gzip-stream-and-appended-fwtool",
+      "result": "PASS"
+    },
+    {
+      "name": "fwtool-independent-metadata-extraction",
+      "result": "PASS"
+    },
+    {
+      "name": "truncated-gzip",
+      "result": "PASS"
+    },
+    {
+      "name": "corrupt-gzip-crc-or-stream",
+      "result": "PASS"
+    },
+    {
+      "name": "symlink-input",
+      "result": "PASS"
+    },
+    {
+      "name": "parent-relative-path",
+      "result": "PASS"
+    },
+    {
+      "name": "absolute-relative-path",
+      "result": "PASS"
+    },
+    {
+      "name": "ext4-direct-root-inode-ownership",
+      "result": "PASS"
+    },
+    {
+      "name": "ext4-wrong-target-file-owner",
+      "result": "PASS"
+    },
+    {
+      "name": "ext4-missing-required-inode",
+      "result": "PASS"
+    },
+    {
+      "name": "actual-dtc-device-tree-parser",
+      "result": "PASS"
+    },
+    {
+      "name": "bad-fdt-magic",
+      "result": "PASS"
+    },
+    {
+      "name": "actual-mkimage-fit-and-all-component-hashes",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong-official-kernel-content",
+      "result": "PASS"
+    },
+    {
+      "name": "corrupt-fit-component-hash",
+      "result": "PASS"
+    },
+    {
+      "name": "actual-mkimage-boot-script-medium-binding",
+      "result": "PASS"
+    },
+    {
+      "name": "boot-script-payload-crc-corruption",
+      "result": "PASS"
+    }
+  ],
+  "environment": "Generated ordinary files; actual dtc/mkimage/fwtool; no block device"
+}

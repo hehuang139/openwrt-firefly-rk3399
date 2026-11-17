@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "count": 10,
+  "method": "Fresh unpack and complete native TF-A/U-Boot compilation in a second build directory, followed by whole-file hash comparison",
+  "checks": [
+    {
+      "mode": "sd",
+      "file": "idbloader.img",
+      "original_sha256": "8473cfa2ee14427529bcad1d042d4302baa5cc4ca7db5a23059c493dcd901a1b",
+      "rebuilt_sha256": "8473cfa2ee14427529bcad1d042d4302baa5cc4ca7db5a23059c493dcd901a1b",
+      "result": "PASS"
+    },
+    {
+      "mode": "sd",
+      "file": "u-boot.itb",
+      "original_sha256": "055fb8c8df561f1c2294814996ead9a9a3307acae7813df84cece3b141ff5166",
+      "rebuilt_sha256": "055fb8c8df561f1c2294814996ead9a9a3307acae7813df84cece3b141ff5166",
+      "result": "PASS"
+    },
+    {
+      "mode": "sd",
+      "file": "u-boot-rockchip.bin",
+      "original_sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c",
+      "rebuilt_sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c",
+      "result": "PASS"
+    },
+    {
+      "mode": "sd",
+      "file": "u-boot.dtb",
+      "original_sha256": "43dd87bf548dd4667f956da0318c97705430a1c9ee7099ab758a3660d30a9e9c",
+      "rebuilt_sha256": "43dd87bf548dd4667f956da0318c97705430a1c9ee7099ab758a3660d30a9e9c",
+      "result": "PASS"
+    },
+    {
+      "mode": "sd",
+      "file": "built.config",
+      "original_sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27",
+      "rebuilt_sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27",
+      "result": "PASS"
+    },
+    {
+      "mode": "emmc",
+      "file": "idbloader.img",
+      "original_sha256": "a61291fdb95806de79759e88c5e546a8bc91127e2e3ae6f0d4c7bfa143f4603e",
+      "rebuilt_sha256": "a61291fdb95806de79759e88c5e546a8bc91127e2e3ae6f0d4c7bfa143f4603e",
+      "result": "PASS"
+    },
+    {
+      "mode": "emmc",
+      "file": "u-boot.itb",
+      "original_sha256": "e1288e548d86632390ecd509a41843f08d7861935ae13603d5325e135513a3ee",
+      "rebuilt_sha256": "e1288e548d86632390ecd509a41843f08d7861935ae13603d5325e135513a3ee",
+      "result": "PASS"
+    },
+    {
+      "mode": "emmc",
+      "file": "u-boot-rockchip.bin",
+      "original_sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f",
+      "rebuilt_sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f",
+      "result": "PASS"
+    },
+    {
+      "mode": "emmc",
+      "file": "u-boot.dtb",
+      "original_sha256": "077fdbfc1f0c7a243c7914a992c76a454b863855a688b290ade5d2e41abe8233",
+      "rebuilt_sha256": "077fdbfc1f0c7a243c7914a992c76a454b863855a688b290ade5d2e41abe8233",
+      "result": "PASS"
+    },
+    {
+      "mode": "emmc",
+      "file": "built.config",
+      "original_sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27",
+      "rebuilt_sha256": "9b23b7b31a2d570b9598b95a44503d392d909806bae8b22b0024a96ce8ee4f27",
+      "result": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+FIT description: FIT image for U-Boot with bl31 (TF-A)
+Created:         Mon Oct  6 00:00:00 2025
+ Image 0 (u-boot)
+  Description:  U-Boot
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Standalone Program
+  Compression:  uncompressed
+  Data Size:    839360 Bytes = 819.69 KiB = 0.80 MiB
+  Architecture: AArch64
+  Load Address: 0x00200000
+  Entry Point:  0x00200000
+  Hash algo:    sha256
+  Hash value:   8015084b17aaf663f6795ebcaecff2393f14a4ecba01254dc0ddadaf5813902d
+ Image 1 (atf-1)
+  Description:  ARM Trusted Firmware
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    143360 Bytes = 140.00 KiB = 0.14 MiB
+  Architecture: AArch64
+  OS:           ARM Trusted Firmware
+  Load Address: 0x00040000
+  Hash algo:    sha256
+  Hash value:   92b28323a48dbf4d3ff01c27e0ab57a89a541575e13e529d21a688737c6812da
+ Image 2 (atf-2)
+  Description:  ARM Trusted Firmware
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    78 Bytes = 0.08 KiB = 0.00 MiB
+  Architecture: AArch64
+  OS:           ARM Trusted Firmware
+  Load Address: 0x00063000
+  Hash algo:    sha256
+  Hash value:   618b524c62a271fe74bc70afbae4037ea24822f2657db1f2ef3d0c20f1e71d88
+ Image 3 (atf-3)
+  Description:  ARM Trusted Firmware
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    8024 Bytes = 7.84 KiB = 0.01 MiB
+  Architecture: AArch64
+  OS:           ARM Trusted Firmware
+  Load Address: 0xff3b0000
+  Hash algo:    sha256
+  Hash value:   b9d8b298be2d6f9887abfb356cdde514cc4c59f88129a03338a552f03ac7ce9b
+ Image 4 (atf-4)
+  Description:  ARM Trusted Firmware
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    8192 Bytes = 8.00 KiB = 0.01 MiB
+  Architecture: AArch64
+  OS:           ARM Trusted Firmware
+  Load Address: 0xff8c0000
+  Hash algo:    sha256
+  Hash value:   67bf4dd100c6c99dbbf76c0b19072e6e9756383925795d94ced000c2a7cf3b9e
+ Image 5 (atf-5)
+  Description:  ARM Trusted Firmware
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Firmware
+  Compression:  uncompressed
+  Data Size:    0 Bytes = 0.00 KiB = 0.00 MiB
+  Architecture: AArch64
+  OS:           ARM Trusted Firmware
+  Load Address: 0xff8c2000
+  Hash algo:    sha256
+  Hash value:   e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+ Image 6 (fdt-1)
+  Description:  fdt-rockchip/rk3399-firefly
+  Created:      Mon Oct  6 00:00:00 2025
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    98776 Bytes = 96.46 KiB = 0.09 MiB
+  Architecture: Unknown Architecture
+  Hash algo:    sha256
+  Hash value:   077fdbfc1f0c7a243c7914a992c76a454b863855a688b290ade5d2e41abe8233
+ Default Configuration: 'config-1'
+ Configuration 0 (config-1)
+  Description:  rockchip/rk3399-firefly.dtb
+  Kernel:       unavailable
+  Firmware:     atf-1
+  FDT:          fdt-1
+  Loadables:    u-boot
+                atf-2
+                atf-3
+                atf-4
+                atf-5

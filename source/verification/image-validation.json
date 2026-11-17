@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "image_count": 4,
+  "checks": 300,
+  "reports": {
+    "emmc": {
+      "result": "PASS",
+      "passed": 73,
+      "total": 73,
+      "image_sha256": "1d66f69190b47146964f952fa9a227ae6d85a02cd56cafc9791e8ba3a1fd4533",
+      "rootfs": {
+        "packages": 195,
+        "kernel_modules": 52
+      }
+    },
+    "emmc-sysupgrade": {
+      "result": "PASS",
+      "passed": 77,
+      "total": 77,
+      "image_sha256": "61cebb3e6fde6ebac7a44e466ff370c201f7a4abe9e0839e9b4592c963cebdf6",
+      "rootfs": {
+        "packages": 195,
+        "kernel_modules": 52
+      }
+    },
+    "sd": {
+      "result": "PASS",
+      "passed": 73,
+      "total": 73,
+      "image_sha256": "009c687cae7077f2c24690d1dc889156a70ad9fe53eed52b2cb3f892434e38a7",
+      "rootfs": {
+        "packages": 195,
+        "kernel_modules": 52
+      }
+    },
+    "sd-sysupgrade": {
+      "result": "PASS",
+      "passed": 77,
+      "total": 77,
+      "image_sha256": "65e4e56bb2cbc49be7dad23f65d3b00412f4c827f4c2932e83ac9b308f39c71a",
+      "rootfs": {
+        "packages": 195,
+        "kernel_modules": 52
+      }
+    }
+  }
+}

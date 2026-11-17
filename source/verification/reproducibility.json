@@ -1,0 +1,313 @@
+{
+  "result": "PASS",
+  "passed": 17,
+  "total": 17,
+  "environment": "Independent fresh offline source-kit build; comparison opens ordinary files read-only.",
+  "checks": [
+    {
+      "name": "release-identity",
+      "pass": true,
+      "detail": [
+        {
+          "board": "firefly-rk3399",
+          "version": "25.12.6",
+          "kernel": "6.12.112"
+        },
+        {
+          "board": "firefly-rk3399",
+          "version": "25.12.6",
+          "kernel": "6.12.112"
+        }
+      ]
+    },
+    {
+      "name": "sd-layout",
+      "pass": true,
+      "detail": {
+        "partitions": [
+          {
+            "type": 131,
+            "start_lba": 65536,
+            "sectors": 65536
+          },
+          {
+            "type": 131,
+            "start_lba": 196608,
+            "sectors": 1048576
+          }
+        ],
+        "disk_signature": "fc339901"
+      }
+    },
+    {
+      "name": "sd-image-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-sd-test1.img",
+        "original": {
+          "bytes": 637534208,
+          "sha256": "4a4414be7d4ec99ce2d3cbebfbafd321dc4334d8f6bd172fe6914dce6d824b3e"
+        },
+        "rebuilt": {
+          "bytes": 637534208,
+          "sha256": "4a4414be7d4ec99ce2d3cbebfbafd321dc4334d8f6bd172fe6914dce6d824b3e"
+        }
+      }
+    },
+    {
+      "name": "sd-compressed-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-sd-test1.img.gz",
+        "original": {
+          "bytes": 23298384,
+          "sha256": "009c687cae7077f2c24690d1dc889156a70ad9fe53eed52b2cb3f892434e38a7"
+        },
+        "rebuilt": {
+          "bytes": 23298384,
+          "sha256": "009c687cae7077f2c24690d1dc889156a70ad9fe53eed52b2cb3f892434e38a7"
+        }
+      }
+    },
+    {
+      "name": "sd-sysupgrade-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-sd-sysupgrade-test1.img.gz",
+        "original": {
+          "bytes": 23298666,
+          "sha256": "65e4e56bb2cbc49be7dad23f65d3b00412f4c827f4c2932e83ac9b308f39c71a"
+        },
+        "rebuilt": {
+          "bytes": 23298666,
+          "sha256": "65e4e56bb2cbc49be7dad23f65d3b00412f4c827f4c2932e83ac9b308f39c71a"
+        }
+      }
+    },
+    {
+      "name": "sd-bootloader-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "source/boot/assets/sd/u-boot-rockchip.bin",
+        "original": {
+          "bytes": 9457664,
+          "sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+        },
+        "rebuilt": {
+          "bytes": 9457664,
+          "sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+        }
+      }
+    },
+    {
+      "name": "sd-fixed-filesystem-clock",
+      "pass": true,
+      "detail": [
+        {
+          "build": 0,
+          "partition": 1,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 0,
+          "partition": 2,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 1,
+          "partition": 1,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 1,
+          "partition": 2,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        }
+      ]
+    },
+    {
+      "name": "emmc-layout",
+      "pass": true,
+      "detail": {
+        "partitions": [
+          {
+            "type": 131,
+            "start_lba": 65536,
+            "sectors": 65536
+          },
+          {
+            "type": 131,
+            "start_lba": 196608,
+            "sectors": 1048576
+          }
+        ],
+        "disk_signature": "fc339902"
+      }
+    },
+    {
+      "name": "emmc-image-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-emmc-test1.img",
+        "original": {
+          "bytes": 637534208,
+          "sha256": "00e2e63f71cac000ac3a45b32ef2acb218c0eca3f0cda301f06d410a407acfd3"
+        },
+        "rebuilt": {
+          "bytes": 637534208,
+          "sha256": "00e2e63f71cac000ac3a45b32ef2acb218c0eca3f0cda301f06d410a407acfd3"
+        }
+      }
+    },
+    {
+      "name": "emmc-compressed-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-emmc-test1.img.gz",
+        "original": {
+          "bytes": 23298501,
+          "sha256": "1d66f69190b47146964f952fa9a227ae6d85a02cd56cafc9791e8ba3a1fd4533"
+        },
+        "rebuilt": {
+          "bytes": 23298501,
+          "sha256": "1d66f69190b47146964f952fa9a227ae6d85a02cd56cafc9791e8ba3a1fd4533"
+        }
+      }
+    },
+    {
+      "name": "emmc-sysupgrade-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "outputs/test1/openwrt-25.12.6-firefly-rk3399-emmc-sysupgrade-test1.img.gz",
+        "original": {
+          "bytes": 23298783,
+          "sha256": "61cebb3e6fde6ebac7a44e466ff370c201f7a4abe9e0839e9b4592c963cebdf6"
+        },
+        "rebuilt": {
+          "bytes": 23298783,
+          "sha256": "61cebb3e6fde6ebac7a44e466ff370c201f7a4abe9e0839e9b4592c963cebdf6"
+        }
+      }
+    },
+    {
+      "name": "emmc-bootloader-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "source/boot/assets/emmc/u-boot-rockchip.bin",
+        "original": {
+          "bytes": 9457664,
+          "sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f"
+        },
+        "rebuilt": {
+          "bytes": 9457664,
+          "sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f"
+        }
+      }
+    },
+    {
+      "name": "emmc-fixed-filesystem-clock",
+      "pass": true,
+      "detail": [
+        {
+          "build": 0,
+          "partition": 1,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 0,
+          "partition": 2,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 1,
+          "partition": 1,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        },
+        {
+          "build": 1,
+          "partition": 2,
+          "wtime": 1792273538,
+          "lastcheck": 1792273538
+        }
+      ]
+    },
+    {
+      "name": "imagebuilder-output-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "work/imagebuilder-output/openwrt-25.12.6-rockchip-armv8-firefly_firefly-rk3399-ext4-sysupgrade.img.gz",
+        "original": {
+          "bytes": 23218531,
+          "sha256": "b68142f264df27b5d0ae65340981cd05ea8fd70b385267485df0d336907211ea"
+        },
+        "rebuilt": {
+          "bytes": 23218531,
+          "sha256": "b68142f264df27b5d0ae65340981cd05ea8fd70b385267485df0d336907211ea"
+        }
+      }
+    },
+    {
+      "name": "device-tree-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "source/board/assets/rk3399-firefly-openwrt.dtb",
+        "original": {
+          "bytes": 65507,
+          "sha256": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+        },
+        "rebuilt": {
+          "bytes": 65507,
+          "sha256": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+        }
+      }
+    },
+    {
+      "name": "kernel-fit-byte-identical",
+      "pass": true,
+      "detail": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/firefly_firefly-rk3399-kernel.bin",
+        "original": {
+          "bytes": 4879628,
+          "sha256": "c0d989ce005a2651672c9e795fb83a658f8dda2ec974096da7e81b794261a25d"
+        },
+        "rebuilt": {
+          "bytes": 4879628,
+          "sha256": "c0d989ce005a2651672c9e795fb83a658f8dda2ec974096da7e81b794261a25d"
+        }
+      }
+    },
+    {
+      "name": "rootfs-complete-inventory-identical",
+      "pass": true,
+      "detail": {
+        "entries": [
+          1989,
+          1989
+        ],
+        "sha256": [
+          "53f03a4f8f9ad2e996dbb2e0453e12142fff7d4e20b8b434e7fedd1e15766dc7",
+          "53f03a4f8f9ad2e996dbb2e0453e12142fff7d4e20b8b434e7fedd1e15766dc7"
+        ],
+        "changed_paths": [],
+        "fields": [
+          "type",
+          "mode",
+          "uid",
+          "gid",
+          "mtime_ns",
+          "bytes",
+          "sha256",
+          "link",
+          "rdev"
+        ]
+      }
+    }
+  ]
+}

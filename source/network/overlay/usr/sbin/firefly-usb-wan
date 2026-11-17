@@ -1,0 +1,83 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Select only supported USB Ethernet hardware; eth0 is always the built-in LAN.
+[ "$(uci -q get firefly_router.main.usb_wan_autoselect)" = 1 ] || exit 0
+case "$(cat /tmp/sysinfo/board_name 2>/dev/null)" in
+    firefly,firefly-rk3399) ;;
+    *) exit 0 ;;
+esac
+lock=/var/lock/firefly-usb-wan
+mkdir "$lock" 2>/dev/null || exit 0
+trap 'rmdir "$lock"' EXIT HUP INT TERM
+
+# Keep administrator-selected WAN devices. LuCI may still change DHCP to PPPoE.
+current=$(uci -q get network.wan.device)
+managed=$(uci -q get firefly_router.main.managed_device)
+if [ -n "$current" ] && [ "$current" != "$managed" ]; then
+    exit 0
+fi
+known_mac=$(uci -q get firefly_router.main.wan_mac)
+candidates=''
+count=0
+matched=''
+matched_count=0
+for entry in /sys/class/net/*; do
+    [ -e "$entry" ] || continue
+    dev=${entry##*/}
+    case "$dev" in eth0|lo|br-*|veth*|ifb*|tun*|tap*) continue ;; esac
+    [ -d "$entry/wireless" ] && continue
+    [ -e "$entry/phy80211" ] && continue
+    [ "$(cat "$entry/type" 2>/dev/null)" = 1 ] || continue
+    path=$(readlink -f "$entry/device")
+    [ -n "$path" ] || continue
+    driver=$(readlink -f "$entry/device/driver")
+    driver=${driver##*/}
+    case "$driver" in r8152|ax88179_178a|asix|cdc_ether|cdc_ncm) ;; *) continue ;; esac
+    usb=0
+    parent=$path
+    while [ "$parent" != / ] && [ -n "$parent" ]; do
+        subsystem=$(readlink -f "$parent/subsystem")
+        if [ "${subsystem##*/}" = usb ] && [ -r "$parent/idVendor" ] && [ -r "$parent/idProduct" ]; then
+            usb=1
+            break
+        fi
+        parent=${parent%/*}
+    done
+    [ "$usb" = 1 ] || continue
+    mac=$(cat "$entry/address" 2>/dev/null | tr 'A-F' 'a-f')
+    printf '%s\n' "$mac" | grep -Eq '^([0-9a-f]{2}:){5}[0-9a-f]{2}$' || continue
+    [ "$mac" != '00:00:00:00:00:00' ] || continue
+    count=$((count + 1))
+    candidates="$dev $mac"
+    if [ -n "$known_mac" ] && [ "$mac" = "$known_mac" ]; then
+        matched="$dev $mac"
+        matched_count=$((matched_count + 1))
+    fi
+done
+if [ -n "$known_mac" ]; then
+    [ "$matched_count" = 1 ] || exit 0
+    selected=$matched
+else
+    if [ "$count" != 1 ]; then
+        [ "$count" -le 1 ] || logger -t firefly-usb-wan 'Multiple USB Ethernet adapters found; select the WAN device in LuCI.'
+        exit 0
+    fi
+    selected=$candidates
+fi
+set -- $selected
+dev=$1
+mac=$2
+[ -n "$dev" ] && [ "$dev" != eth0 ] || exit 1
+if [ "$current" = "$dev" ] && [ "$managed" = "$dev" ] && [ "$known_mac" = "$mac" ]; then
+    exit 0
+fi
+uci -q batch <<EOF
+set network.wan.device='$dev'
+set firefly_router.main.managed_device='$dev'
+set firefly_router.main.wan_mac='$mac'
+commit network
+commit firefly_router
+EOF
+[ "$?" = 0 ] || exit 1
+logger -t firefly-usb-wan "WAN uses USB Ethernet $dev ($mac); current protocol preserved."
+ubus call network reload >/dev/null 2>&1 || true

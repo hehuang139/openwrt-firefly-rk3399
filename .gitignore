@@ -1,0 +1,9 @@
+/work/
+/outputs/
+/logs/
+/downloads/
+/source/cache/
+__pycache__/
+*.pyc
+
+/research/

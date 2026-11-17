@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "Dockerfile",
+      "bytes": 960,
+      "sha256": "0c1d0fa04855342dfc35ff739070100bca414c493a4067ba2a3c54f62c03f943"
+    },
+    {
+      "path": "Dockerfile.local",
+      "bytes": 658,
+      "sha256": "1ae82dd51d0b3d6e10f11be4f9101e291a3ae9aded45c0022971b58731d0aed4"
+    },
+    {
+      "path": "Dockerfile.standalone",
+      "bytes": 958,
+      "sha256": "1e0da02b064b7d873396213d09454c5a295236464860d09eed23b2b666a2c10e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1544,
+      "sha256": "90c2edbf548fe50ee091cca6c569d3af0aa70b4781adfa9b1a5031667c3b213d"
+    },
+    {
+      "path": "probe.py",
+      "bytes": 3030,
+      "sha256": "a491b435c22b88ba6087f53c2243e993d67ac910bdd7d63eefda137a54b54513"
+    },
+    {
+      "path": "probe-validation.json",
+      "bytes": 3336,
+      "sha256": "f5d766e925b10e58617adc11faaecf99ee1ab45ae3eafd7b3233c89813e834bd"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 25070,
+      "sha256": "17deff40ba23d8b63094cd75c0e7b54d9ffceae7a2fe8fce2a7529c6cab56ca0"
+    }
+  ]
+}

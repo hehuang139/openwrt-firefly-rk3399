@@ -1,0 +1,1019 @@
+{
+  "files": [
+    {
+      "path": "source/cache/apk/APKINDEX.1a73ee28.tar.gz",
+      "bytes": 382729,
+      "sha256": "1c830d7fb697589ef30eed07773e82391cc0a9c6d93926d737548e2f28a0f0bd"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.2570d912.tar.gz",
+      "bytes": 11833,
+      "sha256": "6a368ca6cbfd4ae1a9b8ca7299a866db3a90f427091936044ac87af6524549b8"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.2cad0759.tar.gz",
+      "bytes": 110277,
+      "sha256": "993d002ae8ad2e7494b5c223552c9c455144b7b99d538f543cc5566a18001ae3"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.54d643ba.tar.gz",
+      "bytes": 13744,
+      "sha256": "43fc226d4c94e8aac6f5e9b3ee29fd87cbbac606a3e5b95e47b8dfe46f35e437"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.82d5d924.tar.gz",
+      "bytes": 110999,
+      "sha256": "b6755fc1e2f4461ce9a1131ade80e09ca7ff7269a57d084c813cd84e68fd0b79"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.c39f23f7.tar.gz",
+      "bytes": 152310,
+      "sha256": "0f3abbe85a4aaa36579018559cdb6aca31ef84c7346111793ff4224f3276940d"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.c805a0f8.tar.gz",
+      "bytes": 13114,
+      "sha256": "00525f3ee274a2d0fc9f7b2a041517b1a329331f7c7693062c23cdc39b7c9103"
+    },
+    {
+      "path": "source/cache/apk/APKINDEX.c982bf07.tar.gz",
+      "bytes": 746866,
+      "sha256": "6ff85aee5680a92848596c3cad60bb90374bdda428dba3dab35f5709d5665f5b"
+    },
+    {
+      "path": "source/cache/apk/apk-mbedtls-3.0.5-r3.8438b758.apk",
+      "bytes": 127041,
+      "sha256": "2fb21521e7e0dc89687354b780d7aca3a970d6d91418d1ba8aa3d8dcbd8f7a87"
+    },
+    {
+      "path": "source/cache/apk/block-mount-2026.05.23~16718b6e-r1.6e0ee7d0.apk",
+      "bytes": 25112,
+      "sha256": "f553777e88ff67b2b13031f21ee2488ed21efe0f2391c86e03adec33282411b6"
+    },
+    {
+      "path": "source/cache/apk/brcmfmac-firmware-usb-20260221-r1.1b6ece73.apk",
+      "bytes": 502369,
+      "sha256": "5098d058854b99c3aa60047e1b665768a8c13a0327d6e7d24fcd1bf22b3824e0"
+    },
+    {
+      "path": "source/cache/apk/brcmfmac-nvram-4356-sdio-20260221-r1.017e5686.apk",
+      "bytes": 1770,
+      "sha256": "f95f963ed8a4e8c21462107ce1b4e47f2edd44a6681b757e2c09d8a03da99939"
+    },
+    {
+      "path": "source/cache/apk/busybox-1.37.0-r6.f696943b.apk",
+      "bytes": 239830,
+      "sha256": "bc331d7734952d125ef3a3b9604dc66d09a69dd9c2bac1144746e4ac60763610"
+    },
+    {
+      "path": "source/cache/apk/ca-bundle-20260816-r2.7ede8f7b.apk",
+      "bytes": 107000,
+      "sha256": "c05db57523aad88e1d6f926dd483f34e2a21a720204799b4631e9be45cc1cc19"
+    },
+    {
+      "path": "source/cache/apk/cgi-io-2026.07.21~31cb3c89-r1.b0a9ca9c.apk",
+      "bytes": 10195,
+      "sha256": "2d06110919cc311af1099e74552529b9de86229bd530dbf4dac1c91e85ddc0c3"
+    },
+    {
+      "path": "source/cache/apk/cypress-firmware-4356-sdio-5.10.9.2022.0909-r1.4c68f20c.apk",
+      "bytes": 386731,
+      "sha256": "e1b83ecbf8d880cbc3d48476bb76b1f43d9799a21fcb25af72746062b1ea45bc"
+    },
+    {
+      "path": "source/cache/apk/dnsmasq-2.93-r2.3c6bd25b.apk",
+      "bytes": 155572,
+      "sha256": "57382364e72cb5a88c200b5931b83846a45932f8493929a413e17a2a6019f548"
+    },
+    {
+      "path": "source/cache/apk/dropbear-2025.89-r3.86dc8e9e.apk",
+      "bytes": 117389,
+      "sha256": "b6b1ad54e44d1d8ebdbdb6f8beadd47f18b37f16e571b52f63921c7c5013b041"
+    },
+    {
+      "path": "source/cache/apk/e2fsprogs-1.47.3-r1.21316458.apk",
+      "bytes": 184886,
+      "sha256": "b7069a3cc258f3a2cfa84c4773406ffed8866188d48053480355989af523c0b6"
+    },
+    {
+      "path": "source/cache/apk/ethtool-6.15-r1.9249f333.apk",
+      "bytes": 44010,
+      "sha256": "6d061128c0cecb3b25bd01d4c6bc6e6a2c68426211ae96d085e4a55ae6a6073f"
+    },
+    {
+      "path": "source/cache/apk/firewall4-2025.03.17~b6e51575-r2.76f15c45.apk",
+      "bytes": 30949,
+      "sha256": "ad09cfe9de2a2e1b3371648e593840b3ed78841bdb9179b6fa7a11c9ae7e42a3"
+    },
+    {
+      "path": "source/cache/apk/fstools-2026.05.23~16718b6e-r1.cb34b7c8.apk",
+      "bytes": 21478,
+      "sha256": "25dd187af02b7af01f2b38d82679ddffb04bfa816406378f16698f394df1455e"
+    },
+    {
+      "path": "source/cache/apk/fwtool-2025.10.03~04cd252e-r1.7e906342.apk",
+      "bytes": 4576,
+      "sha256": "77a17135af44b2c227f9c188d9ff45d4599400c9d1923c9a762b8fe068279262"
+    },
+    {
+      "path": "source/cache/apk/getrandom-2025.10.30~6f78fa49-r1.c88b99f0.apk",
+      "bytes": 2145,
+      "sha256": "b2fd9e9d1c36986c4029f7af9010f77eca96c784eb456b5966b7bc64afa367f3"
+    },
+    {
+      "path": "source/cache/apk/hostapd-common-2025.08.26~ca266cc2-r7.c2050861.apk",
+      "bytes": 1715,
+      "sha256": "d9b1eb9cc43a776ef89aa9a52add2c8f590df0fe9119b4ef034c13aec00e3fa8"
+    },
+    {
+      "path": "source/cache/apk/iw-6.17-r1.d7bba98a.apk",
+      "bytes": 57180,
+      "sha256": "6327183e462874141b494b63b05a467f653f316dee0883f4d1554fdb08a59e62"
+    },
+    {
+      "path": "source/cache/apk/jansson4-2.14.1-r1.dafbea7e.apk",
+      "bytes": 49159,
+      "sha256": "818b5d18f1119c0bacad5aa22a99ba84de643840bae01caa29a6071c0f7ad41d"
+    },
+    {
+      "path": "source/cache/apk/jshn-2026.11.02~ff13b89e-r1.f8ae6e35.apk",
+      "bytes": 7447,
+      "sha256": "bb95bbaa7ea9647001dd704f72425fea3ee6d7a4c7569dd46bea1b2405f67498"
+    },
+    {
+      "path": "source/cache/apk/jsonfilter-2026.03.16~b9034210-r1.96e3c4b2.apk",
+      "bytes": 11024,
+      "sha256": "fcf431dc274eed83488298fd678d4cb96af5cf689541535e55b30f5e14b91986"
+    },
+    {
+      "path": "source/cache/apk/kmod-brcmfmac-6.12.112.6.18.55-r2.274ab99d.apk",
+      "bytes": 155458,
+      "sha256": "cfcd4866bb71baa8d66a5955e53ad18f613f269f047282acb211440c86b8381f"
+    },
+    {
+      "path": "source/cache/apk/kmod-brcmutil-6.12.112.6.18.55-r2.4914a67b.apk",
+      "bytes": 5074,
+      "sha256": "273509375c3cfd6950f05e347d5d923f12a0bf1936a17d4f0a65f2a8a9f26073"
+    },
+    {
+      "path": "source/cache/apk/kmod-cfg80211-6.12.112.6.18.55-r2.3b71b7d3.apk",
+      "bytes": 198528,
+      "sha256": "c639cb97c038e79fadc11d41a671897422f3f89a6e9300cd1d2c501582dd950c"
+    },
+    {
+      "path": "source/cache/apk/kmod-crypto-crc32c-6.12.112-r1.a7894c4c.apk",
+      "bytes": 821,
+      "sha256": "01a54348092af0306b4fde45a38c85a8b3a56bde9a16f3db3f400ed82d1c7abd"
+    },
+    {
+      "path": "source/cache/apk/kmod-crypto-hash-6.12.112-r1.66b9f51e.apk",
+      "bytes": 813,
+      "sha256": "2aac85cbf70019642732b674f205cc235fd38c01c7a9793966c3cdfa96a8ea65"
+    },
+    {
+      "path": "source/cache/apk/kmod-crypto-sha256-6.12.112-r1.2d1f6777.apk",
+      "bytes": 7309,
+      "sha256": "7e3fd6eb4d169d8467d16298d576ec4e190d0a8361820916158109640fc503b9"
+    },
+    {
+      "path": "source/cache/apk/kmod-gpio-button-hotplug-6.12.112-r5.fb4ed693.apk",
+      "bytes": 6725,
+      "sha256": "105c4229661489a2ea26c1926621a32bf6a951e7f8acf4a9e4c50b111a224230"
+    },
+    {
+      "path": "source/cache/apk/kmod-lib-crc-ccitt-6.12.112-r1.68ce2086.apk",
+      "bytes": 2140,
+      "sha256": "70dfa5c808ff2a6f47349db97fd286d9ee78d26e6cf1664cf8795641a80d7ca2"
+    },
+    {
+      "path": "source/cache/apk/kmod-lib-crc32c-6.12.112-r1.71dce83c.apk",
+      "bytes": 768,
+      "sha256": "aadb02bddfd6f8ee9dd07d6f20ef9201947586df2b16bdecd1f2d8821ab5b3f2"
+    },
+    {
+      "path": "source/cache/apk/kmod-libphy-6.12.112-r1.b8257cf9.apk",
+      "bytes": 794,
+      "sha256": "53f7a8b5a97207bd648b6082f0de9f14af97003b89d8aa03de2d715f8b54ec65"
+    },
+    {
+      "path": "source/cache/apk/kmod-mdio-devres-6.12.112-r1.615545f4.apk",
+      "bytes": 774,
+      "sha256": "9cf6711494463dd142abc568fccc27f12ff86cb1dd2cfa0726d4e4ca733df974"
+    },
+    {
+      "path": "source/cache/apk/kmod-mii-6.12.112-r1.c07ae2fc.apk",
+      "bytes": 789,
+      "sha256": "c9a94cbb510bf484b91f241930df49a9a09ef3608b823f4f262ad7ac1115313b"
+    },
+    {
+      "path": "source/cache/apk/kmod-mmc-6.12.112-r1.b59c010d.apk",
+      "bytes": 813,
+      "sha256": "ee7abde26214a1133c0349567cf8b65f6f4418ce4b806660146bc7a136ac5e79"
+    },
+    {
+      "path": "source/cache/apk/kmod-net-selftests-6.12.112-r1.c665d9a4.apk",
+      "bytes": 776,
+      "sha256": "29e491de6a73122df69dbbf13304b83aad2d307952ecce493d4367d572f39f8f"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-conntrack-6.12.112-r1.789c2b49.apk",
+      "bytes": 59607,
+      "sha256": "cc9716f05995f998379b4c3f5c066168482cfc4fcfcb3da704584f661fc4d376"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-conntrack6-6.12.112-r1.8a58b1e7.apk",
+      "bytes": 654,
+      "sha256": "b1079e167b0082f2d26ed21f94a9d1c1aded83b397f0a74f1309a87bf3d7c942"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-flow-6.12.112-r1.551ea011.apk",
+      "bytes": 17370,
+      "sha256": "00e4a33415802c568e2dbf5975f477cebcf7b2c5e721ed3fea4768fd1e06b098"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-log-6.12.112-r1.d8695e2d.apk",
+      "bytes": 8423,
+      "sha256": "56111408cf7fe6dab9a82334d8bf507b4667a07cd9dbaed2b3c115515f7fa883"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-log6-6.12.112-r1.30571e0c.apk",
+      "bytes": 642,
+      "sha256": "41284e9ba0d1874781f0497aa5d6e86708cd089fd1a6f32cbdb3a5d63c6665c4"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-nat-6.12.112-r1.6c975493.apk",
+      "bytes": 18080,
+      "sha256": "28c09a6329209f75f910d7ee57d1a1ba57d4f08d20f70fbe08f07dae33eb5115"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-reject-6.12.112-r1.261ae54f.apk",
+      "bytes": 4392,
+      "sha256": "5e69fb320805ca96fbb313adb9848b886409cb3f5a17c2aaeffa359a73c649c7"
+    },
+    {
+      "path": "source/cache/apk/kmod-nf-reject6-6.12.112-r1.23f5b521.apk",
+      "bytes": 4884,
+      "sha256": "dd6397ad81df89e907614cef9ce08ef3eb52053f46c1a454678238821b5f3cf4"
+    },
+    {
+      "path": "source/cache/apk/kmod-nfnetlink-6.12.112-r1.ec7c3d06.apk",
+      "bytes": 6277,
+      "sha256": "5c735299f520c20ce8237a63a1d7ae52b14a316527f2cbefe79d9fe3b1888c03"
+    },
+    {
+      "path": "source/cache/apk/kmod-nft-core-6.12.112-r1.fee432e0.apk",
+      "bytes": 127576,
+      "sha256": "ac5a7e1a7f4199c3e54849eff1c94f7ff95d25c99d8dc39e40d062c475c47831"
+    },
+    {
+      "path": "source/cache/apk/kmod-nft-fib-6.12.112-r1.7ffbe3d2.apk",
+      "bytes": 6924,
+      "sha256": "bceb3c4378fc8d6a890285cc6fcbe9bfe62690844855b0f76bde3688f3370e76"
+    },
+    {
+      "path": "source/cache/apk/kmod-nft-nat-6.12.112-r1.a279e738.apk",
+      "bytes": 5422,
+      "sha256": "53d221c1f9aa7aae3b8592770cb4cc5a610a17fd1cabd273e3a9d6e5e31b9f87"
+    },
+    {
+      "path": "source/cache/apk/kmod-nft-offload-6.12.112-r1.0c223e25.apk",
+      "bytes": 5762,
+      "sha256": "0e7ea758b234ec008a309878bfa5850025dcbf11d57d8661ae13a7f7b0df2fb1"
+    },
+    {
+      "path": "source/cache/apk/kmod-nls-base-6.12.112-r1.143219ff.apk",
+      "bytes": 648,
+      "sha256": "3a445003d78d3fe1865b9a477bd35d6594333f516c0ed38abe8cebd73b4306d1"
+    },
+    {
+      "path": "source/cache/apk/kmod-phy-ax88796b-6.12.112-r1.c7c88aff.apk",
+      "bytes": 2173,
+      "sha256": "46e82486760069c6ca5ab30cd97532f4276a2e01f2d5298a38806612306aa984"
+    },
+    {
+      "path": "source/cache/apk/kmod-phylink-6.12.112-r1.56fab286.apk",
+      "bytes": 826,
+      "sha256": "46d978e3c481a1f95631622eee91ac3a28ade7fe3004044b2a40356aa44822e7"
+    },
+    {
+      "path": "source/cache/apk/kmod-ppp-6.12.112-r1.4184b227.apk",
+      "bytes": 27295,
+      "sha256": "304a9059520bed7e6c84757026bb3c0f3e066c69c807fbae8d57b419b861c3ad"
+    },
+    {
+      "path": "source/cache/apk/kmod-pppoe-6.12.112-r1.793652dc.apk",
+      "bytes": 8905,
+      "sha256": "96b152004d87dbadf0c1473adb6d814422cadb020775ffb50aadf3378499e854"
+    },
+    {
+      "path": "source/cache/apk/kmod-pppox-6.12.112-r1.aa9589e4.apk",
+      "bytes": 2848,
+      "sha256": "9e4d4b7af090ce277eae0e10b0857e75d71430e2e1959edc3f92ffa4ea9513ca"
+    },
+    {
+      "path": "source/cache/apk/kmod-slhc-6.12.112-r1.94330ae6.apk",
+      "bytes": 4456,
+      "sha256": "747bf1760cf8c6ed401d860d2fe3e1bafb079c4e911fef727c79f0ff5885ca03"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-common-6.12.112-r1.d3933417.apk",
+      "bytes": 795,
+      "sha256": "d36226c800119879653ae8dec3c3ba688978e077361026e0d298e3a0c07a859b"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-core-6.12.112-r1.2b401106.apk",
+      "bytes": 832,
+      "sha256": "2c5e9abac52d4c39196dedd4b77b64406c987d271504b410f3c14e70325e53e0"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-6.12.112-r1.e98a7c9e.apk",
+      "bytes": 14774,
+      "sha256": "930f009f94df981502e94b2a6a52eded5016edce813f82fea8ae8989ff4ca804"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-asix-6.12.112-r1.2273b86c.apk",
+      "bytes": 14327,
+      "sha256": "9cb7349fa75a5fec94e7aa20c324ff454081f5641c3a96c524dcea14b41eb5dc"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-asix-ax88179-6.12.112-r1.7b6922db.apk",
+      "bytes": 9621,
+      "sha256": "95e5a92f24b5f5164374abb514a24559d3b36110715163cce5e5c1839d4798b0"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-cdc-ether-6.12.112-r1.90169857.apk",
+      "bytes": 4758,
+      "sha256": "5580742424ad7dac3357df38e3d34f9972ce3294cc4dd4e66db40319d629375d"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-cdc-ncm-6.12.112-r1.a3306623.apk",
+      "bytes": 11573,
+      "sha256": "8c42681e654675e2473a9a4d5f8060ead6c805443295ede681ae7d628c8b4d7c"
+    },
+    {
+      "path": "source/cache/apk/kmod-usb-net-rtl8152-6.12.112-r1.a0b7f578.apk",
+      "bytes": 42498,
+      "sha256": "8f42a7cc7af5f109fe87870a8c1398701a58b886444bcd61706e0093376159df"
+    },
+    {
+      "path": "source/cache/apk/libatomic1-14.3.0-r5.03a31b2d.apk",
+      "bytes": 7786,
+      "sha256": "0184617aa8516ba5c88e76559ad88321fab71dd85e74b371a819202acf97f0fc"
+    },
+    {
+      "path": "source/cache/apk/libblkid1-2.41.5-r1.24dc4560.apk",
+      "bytes": 122874,
+      "sha256": "26d92c6f49532b361dfff984a950301269137dfae229ce2d4de64b1bf016297c"
+    },
+    {
+      "path": "source/cache/apk/libblobmsg-json20260213-2026.11.02~ff13b89e-r1.335fe25e.apk",
+      "bytes": 4724,
+      "sha256": "cb803f15bce6987d2aa0a2cc845033b61db339b19f147106dc8cfe98b67918d1"
+    },
+    {
+      "path": "source/cache/apk/libbz2-1.0-1.0.8-r1.db633ac1.apk",
+      "bytes": 26444,
+      "sha256": "4c330eaa912e048a8df8029aaf41215b55ce0c836c4090b3b8c2955c3287e0dc"
+    },
+    {
+      "path": "source/cache/apk/libcomerr0-1.47.3-r1.de7e9890.apk",
+      "bytes": 4736,
+      "sha256": "9b27dc513b407c7491b2c117e8a3383ab791065ee27e6fef90e83c365268f575"
+    },
+    {
+      "path": "source/cache/apk/libe2p2-1.47.3-r1.bf2feefc.apk",
+      "bytes": 13377,
+      "sha256": "04622d59af41d4f7e4b6c2512a5cfa381f5b34789cc84f2cffcc78d612002b69"
+    },
+    {
+      "path": "source/cache/apk/libevdev-1.13.4-r1.889f73c7.apk",
+      "bytes": 26325,
+      "sha256": "a5521bf1354528c1dd1cc5cca82468689665d37fe0b4a535057086aff0089aa7"
+    },
+    {
+      "path": "source/cache/apk/libext2fs2-1.47.3-r1.e5214610.apk",
+      "bytes": 188758,
+      "sha256": "df1d2ad3fa106dc836b9a873de41a45a6ca2dde60d4f15b0036931c1275a5cf1"
+    },
+    {
+      "path": "source/cache/apk/libf2fs6-1.16.0-r4.67df4f94.apk",
+      "bytes": 42453,
+      "sha256": "0c3e8f53ff67499df4d1a9f10e68cd94b9295f470c1ba42aa57ace784da7ae06"
+    },
+    {
+      "path": "source/cache/apk/libffi-3.4.7-r1.1047cd4b.apk",
+      "bytes": 17339,
+      "sha256": "4508aaff31356e9cbe7b408925aedda34c455a11df56530efe5298eb07e5040e"
+    },
+    {
+      "path": "source/cache/apk/libgcc1-14.3.0-r5.07cd4958.apk",
+      "bytes": 50199,
+      "sha256": "c366a1f24fff7dcfd8d5de0faa31892644ddb4c3c642c0bda9e512dbbbf20f25"
+    },
+    {
+      "path": "source/cache/apk/libgdbm-1.25-r1.b0a307d0.apk",
+      "bytes": 32281,
+      "sha256": "4bdbf8d97e5eccce408c04cd5e99726ae63b6966719832b6ce0328c4bd853441"
+    },
+    {
+      "path": "source/cache/apk/libiwinfo-data-2026.05.26~66bdd1a0-r1.04bcb7bf.apk",
+      "bytes": 3785,
+      "sha256": "517a1e72f703799c8b426ddac0ea8251dd719386b2d385b3587df4d325042b7b"
+    },
+    {
+      "path": "source/cache/apk/libiwinfo20230701-2026.05.26~66bdd1a0-r1.a22a71a0.apk",
+      "bytes": 29402,
+      "sha256": "ae186b9e5595ec5e3c8ff88681821d677d70303a69fca9f36fab087de8bc478e"
+    },
+    {
+      "path": "source/cache/apk/libjson-c5-0.18-r1.8eaaba16.apk",
+      "bytes": 32828,
+      "sha256": "cec919e9d8ad2013a6ee867ea42ffe4396703a5caa5371ac2f0d83299f6c8ed9"
+    },
+    {
+      "path": "source/cache/apk/libjson-script20260213-2026.11.02~ff13b89e-r1.567f8115.apk",
+      "bytes": 5870,
+      "sha256": "5e1de2afde145d3539701fa5a6d50aedd0c699c3600c2fb10a4984799977700b"
+    },
+    {
+      "path": "source/cache/apk/liblucihttp-ucode-2023.03.15~9b5b683f-r1.21984db2.apk",
+      "bytes": 4427,
+      "sha256": "da08161c72e1e535ece394dd8d97b1ea22fc67af133ae834e2fd7d37c42c5045"
+    },
+    {
+      "path": "source/cache/apk/liblucihttp0-2023.03.15~9b5b683f-r1.8c3a7fde.apk",
+      "bytes": 8432,
+      "sha256": "b6361946ae9f5721d2c55800092010c983a4a37e915160e288bef72768f80367"
+    },
+    {
+      "path": "source/cache/apk/liblzma-5.8.3-r1.701a50b9.apk",
+      "bytes": 65575,
+      "sha256": "6a41186c8eafeefb8c53a9e995c49cf56d074ac017b00b3fcda6ef6b00b9b1e1"
+    },
+    {
+      "path": "source/cache/apk/libmbedtls21-3.6.7-r1.fd3e4cd7.apk",
+      "bytes": 343067,
+      "sha256": "16fa0da94e23a44870d0c1d9208388bf5442a9ae3fd0305e759dd51fbbc50274"
+    },
+    {
+      "path": "source/cache/apk/libmnl0-1.0.5-r1.25ba2bbb.apk",
+      "bytes": 8205,
+      "sha256": "303f2b58887464eda3ec27a212b3450dd80aa1e387f733ebec2c903156747cf1"
+    },
+    {
+      "path": "source/cache/apk/libncurses6-6.4-r3.87e22d42.apk",
+      "bytes": 177829,
+      "sha256": "4590800f8c0209a723c2cce150144e264461996885b7f1f82581f32b3f342637"
+    },
+    {
+      "path": "source/cache/apk/libnftnl11-1.3.1-r1.7af0103c.apk",
+      "bytes": 64216,
+      "sha256": "468bf726194be48b3a6f892c15587a0e6c24f7568ec359a9d5920c92ba6260d5"
+    },
+    {
+      "path": "source/cache/apk/libnl-tiny1-2025.12.02~40493a65-r1.6f2c00be.apk",
+      "bytes": 17044,
+      "sha256": "f78ad41db1fc0bf3600e3a4dc93551613527960d1c652b137833e6fd105353e2"
+    },
+    {
+      "path": "source/cache/apk/libopenssl3-3.5.9-r1.128450c9.apk",
+      "bytes": 2026664,
+      "sha256": "55931b28ccecf33772aa6ff9505e0a1792863bda0fa110b736687241037d11f4"
+    },
+    {
+      "path": "source/cache/apk/libpthread-1.2.5-r5.9c02587b.apk",
+      "bytes": 644,
+      "sha256": "88d8cb6506d471d963ac2a52f8d1c60a7e7d23e4745e33a17ae9219d7ebaf703"
+    },
+    {
+      "path": "source/cache/apk/libpython3-3.13-3.13.18-r1.121b4be1.apk",
+      "bytes": 1375970,
+      "sha256": "d5ccf38f4ac6be126a9293dc45c86248e5641a6fb022ba90f8fc15778f71d7e2"
+    },
+    {
+      "path": "source/cache/apk/libreadline8-8.3-r1.ab524c63.apk",
+      "bytes": 148003,
+      "sha256": "092f5b89bfcc7d17483c7fc26bc1dd7de43e3d5d1e58427e0db77aeb5d4171da"
+    },
+    {
+      "path": "source/cache/apk/librt-1.2.5-r5.6bae73c1.apk",
+      "bytes": 653,
+      "sha256": "69accf303c16eff5b1d9b30e40108fffebe1c529daf69db7dcf664618ddbcb59"
+    },
+    {
+      "path": "source/cache/apk/libsmartcols1-2.41.5-r1.fc49d6d6.apk",
+      "bytes": 62499,
+      "sha256": "31941c30ff35ad3619a1d380d25a24a79afb4f4fb72ffe907113de691b094211"
+    },
+    {
+      "path": "source/cache/apk/libsqlite3-0-3.53.1-r1.4478894b.apk",
+      "bytes": 581886,
+      "sha256": "c191d380d967649307c21e7ff3c87a968bc1f6a4af5378e6dd381ea752c51194"
+    },
+    {
+      "path": "source/cache/apk/libss2-1.47.3-r1.cf3b2ff0.apk",
+      "bytes": 9320,
+      "sha256": "5a35ed556a680dcff5c15eab668be3a5c80b899704f60f1420ec3221a4bb6d43"
+    },
+    {
+      "path": "source/cache/apk/libubox20260213-2026.11.02~ff13b89e-r1.7d281a1b.apk",
+      "bytes": 32914,
+      "sha256": "604bd43f214e8c0776415ffd936105804440503f70fe81acb4e584728bfbf71c"
+    },
+    {
+      "path": "source/cache/apk/libubus20251202-2026.06.28~24864e78-r2.c6e681a9.apk",
+      "bytes": 13001,
+      "sha256": "cc6852aa2dccbcaa4a0d2051c1eaed18b30d5197403d0affdc41887e3c405ca5"
+    },
+    {
+      "path": "source/cache/apk/libuci20250120-2025.12.02~66127cd7-r1.e976b77c.apk",
+      "bytes": 19589,
+      "sha256": "6016fb900065097991d8c3e75aa8bd2fd0368f227a0ff484960afbf098b609f1"
+    },
+    {
+      "path": "source/cache/apk/libuclient20201210-2026.06.07~daad21fa-r1.1a921fe4.apk",
+      "bytes": 12387,
+      "sha256": "4849f8bf69e1ee5c378e9692153f11c2041f730a0da30ca8070da341ec43193c"
+    },
+    {
+      "path": "source/cache/apk/libucode20230711-2026.07.09~b885dd0f-r3.4e30b15b.apk",
+      "bytes": 81923,
+      "sha256": "044de427368c4cbf0f0590433b279d885400c0c4f0caa20bc94531a82a151da9"
+    },
+    {
+      "path": "source/cache/apk/libudebug-2026.01.16~875e1a7a.7b832d5c.apk",
+      "bytes": 4965,
+      "sha256": "1d08fcb248a8f283688f6c3c6fa793c4aaa39ef759a837f9683dbcdecc06d1eb"
+    },
+    {
+      "path": "source/cache/apk/libudev-zero-1.0.4-r1.fecca8e6.apk",
+      "bytes": 11249,
+      "sha256": "31c13d642739f21c86aaf112c3c88e82d8d324e0a4079bd9d1fc0bf6c46e7723"
+    },
+    {
+      "path": "source/cache/apk/libusb-1.0-0-1.0.29-r1.d797b513.apk",
+      "bytes": 35561,
+      "sha256": "ee2ee3122bcb21caa4905c9a0a1979e01011df53a61726868c8fd6993939b59e"
+    },
+    {
+      "path": "source/cache/apk/libustream-mbedtls20201210-2026.03.01~99f1c0db-r1.14ab7925.apk",
+      "bytes": 6555,
+      "sha256": "820f47332026d6f5ba3fec89fe0c5c6193a94812a4d5a018bb8ef0a3123e7ebe"
+    },
+    {
+      "path": "source/cache/apk/libuuid1-2.41.5-r1.ac4adca6.apk",
+      "bytes": 14713,
+      "sha256": "f0f6e9ebd05e702e9ac3311ae5275a1228a3b0daf25390addb440b3b02e8956d"
+    },
+    {
+      "path": "source/cache/apk/logd-2025.10.30~6f78fa49-r1.cecfd496.apk",
+      "bytes": 12858,
+      "sha256": "3207693ee5fb0d2ffdcf9fdf54fc9486e8f6c1507c7c96431e03c4968e226225"
+    },
+    {
+      "path": "source/cache/apk/luci-app-firewall-26.317.52279~1c75ea4.caf45dc8.apk",
+      "bytes": 18704,
+      "sha256": "cdf92777710f0ebb65ad7e48c39a0d9b7542ab491af8b11cada3f90607c10db1"
+    },
+    {
+      "path": "source/cache/apk/luci-app-package-manager-26.317.52279~1c75ea4.d3c4425b.apk",
+      "bytes": 10960,
+      "sha256": "534441db2ffea3c5259f7209fa615303bb690297da66d4c98741a7ec144e01ca"
+    },
+    {
+      "path": "source/cache/apk/luci-base-26.317.52279~1c75ea4.c339ea46.apk",
+      "bytes": 156168,
+      "sha256": "f1ff99defe4d4e32a6ec6f83447fd0708cc10624db220df5d166c1e491580270"
+    },
+    {
+      "path": "source/cache/apk/luci-i18n-base-zh-cn-26.317.52279~1c75ea4.65bae210.apk",
+      "bytes": 65700,
+      "sha256": "cc251b788af838f2ded04d2222bfd639619f549e48d9b65db15c476febe24511"
+    },
+    {
+      "path": "source/cache/apk/luci-i18n-firewall-zh-cn-26.317.52279~1c75ea4.f4ed545b.apk",
+      "bytes": 8540,
+      "sha256": "a93fd13db8e802a4bc7b399ae3c61d0393788b8d1b8836edecfc70abac470647"
+    },
+    {
+      "path": "source/cache/apk/luci-lib-uqr-26.317.52279~1c75ea4.b0d625b0.apk",
+      "bytes": 5451,
+      "sha256": "b619e9094823442192cc07b37f188cfd83989089d7fc34700c337d86d02915bb"
+    },
+    {
+      "path": "source/cache/apk/luci-light-26.317.52279~1c75ea4.ada93ac1.apk",
+      "bytes": 874,
+      "sha256": "5d2b1ce277da1baaa75c0bcc9fdb2c028b325ba31227e48b799a30fc92b0ef32"
+    },
+    {
+      "path": "source/cache/apk/luci-mod-admin-full-26.317.52279~1c75ea4.15648f01.apk",
+      "bytes": 799,
+      "sha256": "2f107fc745015b36fb5757f4bee3b81c55c44e28fba50b4e7e21b37c60322372"
+    },
+    {
+      "path": "source/cache/apk/luci-mod-network-26.317.52279~1c75ea4.3d83b143.apk",
+      "bytes": 74281,
+      "sha256": "0676fe0632e9991ca09ccd6514ad252ec29282cee083ae646a80b8765f176085"
+    },
+    {
+      "path": "source/cache/apk/luci-mod-status-26.317.52279~1c75ea4.4dbf3c39.apk",
+      "bytes": 45995,
+      "sha256": "01ce13fd8d0605a28827440a9c8431c6ffbf182a153cb37b4b59fa0623ac5b95"
+    },
+    {
+      "path": "source/cache/apk/luci-mod-system-26.317.52279~1c75ea4.80515181.apk",
+      "bytes": 21431,
+      "sha256": "7d116b9b011a961e9b9762b56ca571a844eb80866320d29c60bbbf3c3ce25800"
+    },
+    {
+      "path": "source/cache/apk/luci-proto-ipv6-26.317.52279~1c75ea4.45b5737a.apk",
+      "bytes": 4251,
+      "sha256": "bdba62d24cabee8cad0ad02df8cc2f909402a4c0012fa77e8668fcc669372c29"
+    },
+    {
+      "path": "source/cache/apk/luci-proto-ppp-26.317.52279~1c75ea4.73f20189.apk",
+      "bytes": 3297,
+      "sha256": "a4a621003099a24d045bb65a30438014775e9c95573fe56e801a929965ab82d9"
+    },
+    {
+      "path": "source/cache/apk/luci-ssl-26.317.52279~1c75ea4.a67f4b4d.apk",
+      "bytes": 808,
+      "sha256": "ea0af7bb0157cabeb7335045fcd4a29a4a79a281537f7ff8559507c2f344225e"
+    },
+    {
+      "path": "source/cache/apk/luci-theme-bootstrap-26.317.52279~1c75ea4.ae467404.apk",
+      "bytes": 19375,
+      "sha256": "1b44f8518a24cabf818529fbf82495d6bb593e15fe3addd92a7d68ac3e4bd0e7"
+    },
+    {
+      "path": "source/cache/apk/mkf2fs-1.16.0-r4.dfe28792.apk",
+      "bytes": 16165,
+      "sha256": "45267798d9e794ae00ecd479691711f5af0cd9a599d8368ccdf81532ad1575e1"
+    },
+    {
+      "path": "source/cache/apk/mtd-27.5047e56d.apk",
+      "bytes": 11038,
+      "sha256": "6d0d8c10fd7d93b9ee7898b54b462edd31f24d7da65f86e7a1bf2793bfdb11a7"
+    },
+    {
+      "path": "source/cache/apk/netifd-2026.02.26~cbb83a18-r2.9f5752b7.apk",
+      "bytes": 120272,
+      "sha256": "4bf1c6ef8c287be6e3a55b98e97e3b214f4821dacdbac76f90b8a5a9132b078c"
+    },
+    {
+      "path": "source/cache/apk/nftables-json-1.1.6-r2.a2398db6.apk",
+      "bytes": 327585,
+      "sha256": "7ca0424d590ed71ba5d354e9ff8e1e3db7dfa9da785d5ade0412d471bf41dbd5"
+    },
+    {
+      "path": "source/cache/apk/odhcp6c-2026.06.27~10a52220-r3.ffd21fe4.apk",
+      "bytes": 41370,
+      "sha256": "4d797adadf493fa9599ba886861d518cf3dced45bbafe98f0cd105f55cb2df55"
+    },
+    {
+      "path": "source/cache/apk/odhcpd-ipv6only-2026.06.29~5d7be43f-r1.883d26ac.apk",
+      "bytes": 56416,
+      "sha256": "ffa75525caea25f6f60bd97b0e7041fc88ea4fdc97031a1eedf369f55af2f34a"
+    },
+    {
+      "path": "source/cache/apk/openwrt-keyring-2025.12.10~f0670054-r1.581ee272.apk",
+      "bytes": 981,
+      "sha256": "29823fbeb7ca3b928c68fc31f97b02b5a839cb9c95a444beb4ac2ed26e0a78fb"
+    },
+    {
+      "path": "source/cache/apk/partx-utils-2.41.5-r1.1dde9aa6.apk",
+      "bytes": 58452,
+      "sha256": "7c7ba86769fb7d69de27c033a2983222b625eb3e2c232364cae2a977b890db1f"
+    },
+    {
+      "path": "source/cache/apk/ppp-2.5.2-r4.f36984e2.apk",
+      "bytes": 144864,
+      "sha256": "4fc248e09d273d52553341a424906a9aff5ccc2a1acfa8a3183e9fbbcfdd2ccf"
+    },
+    {
+      "path": "source/cache/apk/ppp-mod-pppoe-2.5.2-r4.3dca74be.apk",
+      "bytes": 13210,
+      "sha256": "c10eda9ef3b15b0a11b3e11ab54d924906d79b010bb2a5d908663ecd3ead05f1"
+    },
+    {
+      "path": "source/cache/apk/procd-2026.03.13~58eb263d-r1.04f20bc8.apk",
+      "bytes": 60602,
+      "sha256": "1eace911cf8607f79a7efba5c5fc55305a4f7496fec9168d210aceccb77d0dc9"
+    },
+    {
+      "path": "source/cache/apk/procd-seccomp-2026.03.13~58eb263d-r1.a6de9c6a.apk",
+      "bytes": 13946,
+      "sha256": "1d6f089ab5551b2dd70982a5a5fdd37729bdc7c237e72df1d45c33085020f0f9"
+    },
+    {
+      "path": "source/cache/apk/procd-ujail-2026.03.13~58eb263d-r1.2c3f2d6c.apk",
+      "bytes": 42287,
+      "sha256": "ca47287e6791fb7b180975ae15f86dd245261edd70032b9b117f3f904672e413"
+    },
+    {
+      "path": "source/cache/apk/px5g-mbedtls-11.0cab8200.apk",
+      "bytes": 5942,
+      "sha256": "82fc7f951b228de45d9b00f44446013d96998f563646c8a2a26acca6ce7e80c4"
+    },
+    {
+      "path": "source/cache/apk/python3-3.13.18-r1.5738f7cd.apk",
+      "bytes": 1286,
+      "sha256": "d3e0ad5bd344af61e6e6e41d87701896ab357305febab70ba767b7042268617a"
+    },
+    {
+      "path": "source/cache/apk/python3-asyncio-3.13.18-r1.3a7a1aea.apk",
+      "bytes": 251694,
+      "sha256": "ee573932034f476ffc66fa4290b658def319a6e0b664df3a60448eba4d3d9f9a"
+    },
+    {
+      "path": "source/cache/apk/python3-base-3.13.18-r1.4e74ac05.apk",
+      "bytes": 232694,
+      "sha256": "e85bebcb068fd8fcad7a214eae9036af8c03a6530c9b367825184ebf26d7d078"
+    },
+    {
+      "path": "source/cache/apk/python3-codecs-3.13.18-r1.50a9cb7a.apk",
+      "bytes": 664931,
+      "sha256": "c3e2c9624c61fb5773d7c5ef89454c5109f3abe733ea94609303a8f1f61b0374"
+    },
+    {
+      "path": "source/cache/apk/python3-ctypes-3.13.18-r1.a1483a3a.apk",
+      "bytes": 79926,
+      "sha256": "313060abc2ccc012be17e2a09705e42570494e9903308c53795074826be1916e"
+    },
+    {
+      "path": "source/cache/apk/python3-dbm-3.13.18-r1.de5b9181.apk",
+      "bytes": 23834,
+      "sha256": "a9597567a676a3571f24043fc55f54f8542749c5c393cc1b1d313c583bb2708f"
+    },
+    {
+      "path": "source/cache/apk/python3-decimal-3.13.18-r1.75026fe4.apk",
+      "bytes": 83472,
+      "sha256": "54e446ee29526a8d476bba1fe490c8017c7f3979b7e40a4a9facfb420345b052"
+    },
+    {
+      "path": "source/cache/apk/python3-email-3.13.18-r1.7cc1bb73.apk",
+      "bytes": 176277,
+      "sha256": "26940786209d4821d7720f31839ac57039281419072ab4163a8626f3a8d67d82"
+    },
+    {
+      "path": "source/cache/apk/python3-light-3.13.18-r1.5b02b924.apk",
+      "bytes": 2840174,
+      "sha256": "92b5d4b05ffc2f1ca1fcbce0d1f7e75376c7fe1b9e036990aab15e69517f8a64"
+    },
+    {
+      "path": "source/cache/apk/python3-logging-3.13.18-r1.594c942a.apk",
+      "bytes": 84399,
+      "sha256": "8ff998904747439c9985852e66cdc56fcd9f985fb8a40c40849ee553f34287bf"
+    },
+    {
+      "path": "source/cache/apk/python3-lzma-3.13.18-r1.30ab858c.apk",
+      "bytes": 18813,
+      "sha256": "d4ad68f044d5ebe589324f990ec936f61155265ecd10fc4c4d7e26e8965c1098"
+    },
+    {
+      "path": "source/cache/apk/python3-multiprocessing-3.13.18-r1.84c4325f.apk",
+      "bytes": 172267,
+      "sha256": "c899e4334818014bce5bc48213ddb585c79375b4ed561dfd0025b67bc9333bd2"
+    },
+    {
+      "path": "source/cache/apk/python3-ncurses-3.13.18-r1.9c005e0a.apk",
+      "bytes": 52979,
+      "sha256": "6f7ba4e2142b5bc953cff5a7cdfbca1c1d74d76a3076dd538a0cca006d9fc6fc"
+    },
+    {
+      "path": "source/cache/apk/python3-openssl-3.13.18-r1.1a30cbbe.apk",
+      "bytes": 75387,
+      "sha256": "3d34f2e2c5ac3aa0dda633e781701b090d99eeef09ecf9f4d6c717d6722ba660"
+    },
+    {
+      "path": "source/cache/apk/python3-pydoc-3.13.18-r1.58205529.apk",
+      "bytes": 273953,
+      "sha256": "7cd04560c551ca5943a72b1bd5e7e05069a114f46161237cde70e11a56ecbe41"
+    },
+    {
+      "path": "source/cache/apk/python3-readline-3.13.18-r1.41639243.apk",
+      "bytes": 10676,
+      "sha256": "0c4715b7a7abc287afa2871c0a1d175fcbc7fce72f9fb57ec773a3193c156860"
+    },
+    {
+      "path": "source/cache/apk/python3-sqlite3-3.13.18-r1.e7f4940e.apk",
+      "bytes": 46652,
+      "sha256": "401d49525bb48010ed94702c6b7f0c2aed79eddb3375ff77eed82aebbe92e9a4"
+    },
+    {
+      "path": "source/cache/apk/python3-unittest-3.13.18-r1.d399551f.apk",
+      "bytes": 125654,
+      "sha256": "a1118dec1c351f2aa9c1ddd608e62b13aa6d6dc44b006fc05f80cb52d4bff850"
+    },
+    {
+      "path": "source/cache/apk/python3-urllib-3.13.18-r1.871c9fe2.apk",
+      "bytes": 82396,
+      "sha256": "8e6c7199c92d70a77cb49c779a1d1129a4bdc8c27c759f169a76fb99783251f6"
+    },
+    {
+      "path": "source/cache/apk/python3-uuid-3.13.18-r1.d0096769.apk",
+      "bytes": 16619,
+      "sha256": "068e6248e4d2010339af37a4ca474703e19441fc3925e3c5e4fb148f9f33a652"
+    },
+    {
+      "path": "source/cache/apk/python3-xml-3.13.18-r1.08564c21.apk",
+      "bytes": 270584,
+      "sha256": "2c9b03d23ad35b443e32b33a67935aeb45842eddd10bfd757685b92e33619c7c"
+    },
+    {
+      "path": "source/cache/apk/r8152-firmware-20260221-r1.cc6c03a1.apk",
+      "bytes": 10897,
+      "sha256": "42e10ed570720b30e34ff27f5ee3d97ecf0b5e422c8828490aefbf214ebcb528"
+    },
+    {
+      "path": "source/cache/apk/rpcd-2026.10.04~d99f703e-r1.c4d59304.apk",
+      "bytes": 27755,
+      "sha256": "15f719f0a6498843d09b54e1737ba1d4eeb41c951771e870febaa1997400079b"
+    },
+    {
+      "path": "source/cache/apk/rpcd-mod-file-2026.10.04~d99f703e-r1.40e1a41b.apk",
+      "bytes": 9128,
+      "sha256": "4ed3707b82d75f3bdf8d1e5095a00f4a97b206a74323f813c7387f3997ff834e"
+    },
+    {
+      "path": "source/cache/apk/rpcd-mod-iwinfo-2026.10.04~d99f703e-r1.98ca3f99.apk",
+      "bytes": 8303,
+      "sha256": "72416c08539aae6ec77b9d269e783203eef7ceba51e2276b9f6c5011e5d0a102"
+    },
+    {
+      "path": "source/cache/apk/rpcd-mod-luci-20240305-r1.6fc3adab.apk",
+      "bytes": 15564,
+      "sha256": "8ceaf0a350f8d24f3e65d45aeedb8a6b8e2ab0ee8a8a064d867fd86a7fa0229a"
+    },
+    {
+      "path": "source/cache/apk/rpcd-mod-rrdns-20170710.bfa714cc.apk",
+      "bytes": 4584,
+      "sha256": "572710b16d8174191c1d1bb91d16b79e4212fd00707143f2af97792cbb93cf17"
+    },
+    {
+      "path": "source/cache/apk/rpcd-mod-ucode-2026.10.04~d99f703e-r1.59d1c67d.apk",
+      "bytes": 8747,
+      "sha256": "bfbe8ed9593eb6b80747f0b812972ad02512effeb02abc6ca74530d6750a8d42"
+    },
+    {
+      "path": "source/cache/apk/terminfo-6.4-r3.cbe64fe6.apk",
+      "bytes": 9419,
+      "sha256": "59329bcbde4198a8173443a719092b872a2de42a9e863b75e06477ca5a462b67"
+    },
+    {
+      "path": "source/cache/apk/uboot-envtools-2025.10-r2.841b0446.apk",
+      "bytes": 16211,
+      "sha256": "aef7e763ed02fb6747d314541f951f04b0458f52209b400027297173eda00ca1"
+    },
+    {
+      "path": "source/cache/apk/ubox-2025.10.30~6f78fa49-r1.b2eff5c8.apk",
+      "bytes": 19185,
+      "sha256": "23ecc3c9649beb2f5b7707ca6588f6947518a677d2bce70fe9e4dd4c3230c9c0"
+    },
+    {
+      "path": "source/cache/apk/ubus-2026.06.28~24864e78-r2.288fccb6.apk",
+      "bytes": 6934,
+      "sha256": "3b2b9ca50487aa0eb8b33e8cafc611eaf69aac43672567bc1f5b1e1e8ebb9346"
+    },
+    {
+      "path": "source/cache/apk/ubusd-2026.06.28~24864e78-r2.5ee1bf6c.apk",
+      "bytes": 14779,
+      "sha256": "fdb88b36663f64cc67ab125af394a953f8dab94188d2fca4c3dbf9f31818ba38"
+    },
+    {
+      "path": "source/cache/apk/uci-2025.12.02~66127cd7-r1.15e1d202.apk",
+      "bytes": 7658,
+      "sha256": "4f29403c20161aa2c5cbace6a695279e66a731574a71851b92fc498949ba66d1"
+    },
+    {
+      "path": "source/cache/apk/uclient-fetch-2026.06.07~daad21fa-r1.2772a0d4.apk",
+      "bytes": 9092,
+      "sha256": "a7e6dcfd6299d8ff9aff9e3a0a9389f2050d80bd7df639d864e13694a18b3e70"
+    },
+    {
+      "path": "source/cache/apk/ucode-2026.07.09~b885dd0f-r3.1bbaebd0.apk",
+      "bytes": 7407,
+      "sha256": "052f9c546c37a6d58df023b12518798539564f822c15284e5cac143f966c9140"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-digest-2026.07.09~b885dd0f-r3.2be42677.apk",
+      "bytes": 17325,
+      "sha256": "35edaf3776f72f0ecfd9c599cdcb3547652c1fba2de8543f1b78ff89e5b59fa1"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-fs-2026.07.09~b885dd0f-r3.9dc8f4f5.apk",
+      "bytes": 12775,
+      "sha256": "a9f943535b2c927ab2879571a050804f810e2a02971d963526287c223a6f1bcf"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-html-1.114db3ba.apk",
+      "bytes": 22695,
+      "sha256": "16ab9117b64190b9758a41b4ec5d3db40fbe8aa34a0dd65b029df9153d17aa8b"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-log-2026.07.09~b885dd0f-r3.0e082246.apk",
+      "bytes": 4772,
+      "sha256": "e569d4cdd654b57f997269329cdd9d6d80b9c1fcb4da9d917e8fdd77dba28cd0"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-math-2026.07.09~b885dd0f-r3.0aa296eb.apk",
+      "bytes": 4843,
+      "sha256": "e8925659b948b338f718413ff5db803b0a7b37bfd28153542662a5e4622336e2"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-nl80211-2026.07.09~b885dd0f-r3.eca93bb1.apk",
+      "bytes": 22230,
+      "sha256": "2c9d1aaac760bb3f057c03c95e0a0966263af7d80772ba1c4b52be5e8ac05523"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-rtnl-2026.07.09~b885dd0f-r3.e9df20e0.apk",
+      "bytes": 25888,
+      "sha256": "5218a91ab7dd161bc5257d66923256754fe637bd13b82bb0b1a704cbfa139dd4"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-ubus-2026.07.09~b885dd0f-r3.c739b11f.apk",
+      "bytes": 18753,
+      "sha256": "5709e47fbd84d31432094f16ef7eec8c6d4f0e9479da1247e837e71caa8d49cd"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-uci-2026.07.09~b885dd0f-r3.4ac0b348.apk",
+      "bytes": 8647,
+      "sha256": "0f47a1d9a4df18eef97db8f720fc7695b236dd2996fdcce665a5eb8052a40741"
+    },
+    {
+      "path": "source/cache/apk/ucode-mod-uloop-2026.07.09~b885dd0f-r3.72b90d96.apk",
+      "bytes": 9957,
+      "sha256": "757f36dc27686384be383f78e3bd430a1135baf19d969667d0167c770fb9b8ab"
+    },
+    {
+      "path": "source/cache/apk/uhttpd-2026.11.05~93b05e0b-r1.bd6efbb1.apk",
+      "bytes": 33426,
+      "sha256": "ebbe84c1725075431c0d1b97e28eeddc5950b1e3f5fd948123b56dafea931a4b"
+    },
+    {
+      "path": "source/cache/apk/uhttpd-mod-ubus-2026.11.05~93b05e0b-r1.b7bd7006.apk",
+      "bytes": 9971,
+      "sha256": "bb6af9cac266689b72f48efcb1e6bdf8c532d2c8c9f164f5fa79d8cc43956dac"
+    },
+    {
+      "path": "source/cache/apk/urandom-seed-3.88964260.apk",
+      "bytes": 1417,
+      "sha256": "d9a6b108354bb89ab94e203e29d916a644113f51da3bb9ca95ddb27ecd018616"
+    },
+    {
+      "path": "source/cache/apk/urngd-2025.10.03~f17e33d9-r1.2da5cbcb.apk",
+      "bytes": 8363,
+      "sha256": "16040d6bbe4e741c23b111803b38e06cdad38455f69b37f7f07525da4570659f"
+    },
+    {
+      "path": "source/cache/apk/usbids-0.407-r1.3e81ca0e.apk",
+      "bytes": 255376,
+      "sha256": "b2a8bbdf5312d84ca17eeefafb7dc863b072efe72245cd6493fb62488b13ceb3"
+    },
+    {
+      "path": "source/cache/apk/usbutils-019-r1.1bf06fd9.apk",
+      "bytes": 56059,
+      "sha256": "a6612a14f137429e1117197d89cc2a25c08e98c470e7c2c7426519de46691c1d"
+    },
+    {
+      "path": "source/cache/apk/usign-2025.10.03~c4c72b1b-r1.95155388.apk",
+      "bytes": 10941,
+      "sha256": "27ed6ddb1f6e067106a92117b97e669adef47852f9906edaa3d0f96057cd5564"
+    },
+    {
+      "path": "source/cache/apk/wifi-scripts-1.0-r1.583730fb.apk",
+      "bytes": 70485,
+      "sha256": "a325529dbd0d12cb4906a6290835a15c7b5a67b62d217bed3bb870a2816af2da"
+    },
+    {
+      "path": "source/cache/apk/wireless-regdb-2026.09.03-r1.4fd2954e.apk",
+      "bytes": 3318,
+      "sha256": "839afb3fb4a8d0a10ed84ae244ca4b291bb256918d8ccefafc382606bfe3ead6"
+    },
+    {
+      "path": "source/cache/apk/wpad-basic-mbedtls-2025.08.26~ca266cc2-r7.be35358c.apk",
+      "bytes": 566617,
+      "sha256": "3570db0b4e008bfeb90a06bbe25347b2dc1d4da5a853884ab0d9837fe180e70a"
+    },
+    {
+      "path": "source/cache/apk/zlib-1.3.1-r1.6601eb27.apk",
+      "bytes": 45058,
+      "sha256": "f809148739975731b82f6d034a5b2d93a31805d5e7120054dcb2b0dded7be177"
+    },
+    {
+      "path": "downloads/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64.tar.zst",
+      "bytes": 51901697,
+      "sha256": "cfee81dcfd592a4c28941c2aabf098ccb84d0bd4d2c2eae779bd6e210ae9ddfe"
+    },
+    {
+      "path": "source/boot/u-boot-2025.10.tar.bz2",
+      "bytes": 33803092,
+      "sha256": "b4f032848e56cc8f213ad59f9132c084dbbb632bc29176d024e58220e0efdf4a"
+    },
+    {
+      "path": "source/boot/trusted-firmware-a-v2.13.tar.gz",
+      "bytes": 10671703,
+      "sha256": "afb5c408392fcec840bd30de9b02a236b0108142024f9853b542b596b0d894e3"
+    }
+  ]
+}

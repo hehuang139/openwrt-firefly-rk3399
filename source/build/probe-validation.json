@@ -1,0 +1,152 @@
+{
+  "result": "PASS",
+  "passed": 29,
+  "total": 29,
+  "checks": [
+    {
+      "name": "host-tool:gcc",
+      "pass": true,
+      "detail": "/usr/bin/gcc"
+    },
+    {
+      "name": "host-tool:g++",
+      "pass": true,
+      "detail": "/usr/bin/g++"
+    },
+    {
+      "name": "host-tool:make",
+      "pass": true,
+      "detail": "/usr/bin/make"
+    },
+    {
+      "name": "host-tool:flex",
+      "pass": true,
+      "detail": "/usr/bin/flex"
+    },
+    {
+      "name": "host-tool:bison",
+      "pass": true,
+      "detail": "/usr/bin/bison"
+    },
+    {
+      "name": "host-tool:dtc",
+      "pass": true,
+      "detail": "/usr/bin/dtc"
+    },
+    {
+      "name": "host-tool:swig",
+      "pass": true,
+      "detail": "/usr/bin/swig"
+    },
+    {
+      "name": "host-tool:rsync",
+      "pass": true,
+      "detail": "/usr/bin/rsync"
+    },
+    {
+      "name": "host-tool:xz",
+      "pass": true,
+      "detail": "/usr/bin/xz"
+    },
+    {
+      "name": "host-tool:zstd",
+      "pass": true,
+      "detail": "/usr/bin/zstd"
+    },
+    {
+      "name": "host-tool:mkimage",
+      "pass": true,
+      "detail": "/usr/bin/mkimage"
+    },
+    {
+      "name": "host-tool:e2fsck",
+      "pass": true,
+      "detail": "/usr/sbin/e2fsck"
+    },
+    {
+      "name": "host-tool:debugfs",
+      "pass": true,
+      "detail": "/usr/sbin/debugfs"
+    },
+    {
+      "name": "host-tool:qemu-aarch64-static",
+      "pass": true,
+      "detail": "/usr/bin/qemu-aarch64-static"
+    },
+    {
+      "name": "host-tool:tar",
+      "pass": true,
+      "detail": "/usr/bin/tar"
+    },
+    {
+      "name": "host-tool:patch",
+      "pass": true,
+      "detail": "/usr/bin/patch"
+    },
+    {
+      "name": "host-tool:gawk",
+      "pass": true,
+      "detail": "/usr/bin/gawk"
+    },
+    {
+      "name": "host-python:elftools.elf.elffile",
+      "pass": true,
+      "detail": "/usr/lib/python3/dist-packages/elftools/elf/elffile.py"
+    },
+    {
+      "name": "host-python:setuptools",
+      "pass": true,
+      "detail": "/usr/lib/python3/dist-packages/setuptools/__init__.py"
+    },
+    {
+      "name": "host-python:distutils",
+      "pass": true,
+      "detail": "/usr/lib/python3.10/distutils/__init__.py"
+    },
+    {
+      "name": "host-python:ssl",
+      "pass": true,
+      "detail": "/usr/lib/python3.10/ssl.py"
+    },
+    {
+      "name": "cross-compile:aarch64-linux-gnu-gcc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cross-elf-machine:aarch64-linux-gnu-gcc",
+      "pass": true,
+      "detail": 183
+    },
+    {
+      "name": "compiler-version:aarch64-linux-gnu-gcc",
+      "pass": true,
+      "detail": "aarch64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    },
+    {
+      "name": "cross-compile:arm-linux-gnueabihf-gcc",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cross-elf-machine:arm-linux-gnueabihf-gcc",
+      "pass": true,
+      "detail": 40
+    },
+    {
+      "name": "compiler-version:arm-linux-gnueabihf-gcc",
+      "pass": true,
+      "detail": "arm-linux-gnueabihf-gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+    },
+    {
+      "name": "official-ib-wrapper:mkimage",
+      "pass": true,
+      "detail": "mkimage version 2025.10\n"
+    },
+    {
+      "name": "official-ib-wrapper:apk",
+      "pass": true,
+      "detail": "apk-tools 3.0.5, compiled for x86_64.\n"
+    }
+  ]
+}

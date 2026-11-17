@@ -1,0 +1,5 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+case "$ACTION" in
+    add|move|remove) /usr/sbin/firefly-usb-wan ;;
+esac

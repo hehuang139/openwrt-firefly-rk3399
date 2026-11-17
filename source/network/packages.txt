@@ -1,0 +1,10 @@
+luci-ssl
+luci-i18n-base-zh-cn
+luci-i18n-firewall-zh-cn
+kmod-usb-net-rtl8152
+kmod-usb-net-asix-ax88179
+kmod-usb-net-asix
+kmod-usb-net-cdc-ether
+kmod-usb-net-cdc-ncm
+ethtool
+usbutils

@@ -1,0 +1,83 @@
+{
+  "checked_on": "2026-11-17",
+  "latest_stable": {
+    "version": "25.12.6",
+    "released": "2026-10-18",
+    "branch": "25.12",
+    "release_code": "r33311-981c978eff",
+    "source_date_epoch": 1792273538,
+    "evidence": [
+      "openwrt-home.html:353-357",
+      "releases-index.html",
+      "profiles.json"
+    ]
+  },
+  "target": {
+    "name": "rockchip/armv8",
+    "package_arch": "aarch64_generic",
+    "kernel": "6.12.112",
+    "kernel_release": "1",
+    "kernel_vermagic": "5eacf764ba9415e5d7ff4aecb2e45c4d",
+    "package_manager": "apk-mbedtls",
+    "uboot_source": "2025.10"
+  },
+  "original_firefly_rk3399": {
+    "official_profile": false,
+    "official_uboot_package": false,
+    "source_evidence": [
+      "armv8.mk",
+      "uboot-rockchip-Makefile",
+      "profiles.json"
+    ],
+    "warning": "OfficialFireflyROC-RK3328-CCprofileisdifferentSoC/board andmustnotbeused"
+  },
+  "usable_rk3399_donor": {
+    "name": "pine64_rockpro64",
+    "supported_devices": [
+      "pine64,rockpro64",
+      "pine64,rockpro64-v2.1"
+    ],
+    "ext4_gzip_bytes": 10063562,
+    "ext4_sha256": "fdd00dbd948c9bc53d724f4a98b84306673601dd5e35574c0bf627893e2eda0a",
+    "scope": "Generic officialRK3399 kernel/userspaceonly;replaceDTB/bootloaders/profile/defaultnetwork/upgrademetadataforFirefly"
+  },
+  "official_tools": {
+    "imagebuilder": {
+      "filename": "openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64.tar.zst",
+      "sha256": "cfee81dcfd592a4c28941c2aabf098ccb84d0bd4d2c2eae779bd6e210ae9ddfe"
+    },
+    "sdk": {
+      "filename": "openwrt-sdk-25.12.6-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64.tar.zst",
+      "sha256": "2a45cbfa7e6cce588d006039205afba03bd242e90d2df4dc442920716a642ce0",
+      "gcc": "14.3.0",
+      "libc": "musl"
+    }
+  },
+  "build_route": {
+    "recommended": "ImageBuilderofficial25.12.6+newFireflyprofileifactualofficialkernelconfigcoversallmandatoryhardware;compileFireflyDTSagainst6.12.112DTsources,embedcorrectDTBinFIT,substituteverifiedFireflyDDR3U-Boot,bundleexactmatchingofficialpackages/modules. Preserveofficialkernel+moduleABI andversion.",
+    "fallback": "Fullsourcebuildv25.12.6ifkernelconfigneedsnewbuiltinfeaturesorImageBuildercannotproperlydefinecustomprofile/FIT.",
+    "must_verify": [
+      "Actual6.12.112kernelconfigdriversMMC/SDHCI/GMAC/PHY/RK808/USB",
+      "BoardmatchingDDR3U-Bootandrootdevselection",
+      "FireflyDTB6.12.112ratherthanold6.6binary",
+      "Newfireflysupported_devicesmetadata",
+      "LuCIandnetworkdefaults",
+      "sysupgradewritesbootdiskanddoesnotuseforeignboarddefaults"
+    ]
+  },
+  "network_upstream": {
+    "file": "02_network",
+    "fallback": "Defaultcaseucidef_set_interface_laneth0",
+    "note": "Originalboardnotexplicitcase;addFireflycaseforclarity. Singlebuilt-ineth0LANisreasonablefirstboot;noautomaticWANassumption."
+  },
+  "sysupgrade": {
+    "file": "platform.sh",
+    "metadata_required": true,
+    "behavior": "export_bootdevice/export_partdevice determinesrunningbootdisk;partitionlayoutcompared. FullimagewritteniflayoutdiffelsepartitionsandMBRsignatureupdated. Bootloadernotalwaysrewrittenonmatchinglayout.",
+    "implication": "TFandeMMCbootrootPARTUUIDsneedunique/correctresolution;customsupported_devicesmustFirefly. Do notannouncegenericOpenWrtRockPro64upgradesafe."
+  },
+  "upstream_tag_refs": [
+    "22dd0e28678a6cd6fbadea2d5aaded3a805ab8a4\trefs/tags/v25.12.6",
+    "64900e756efa667774214f9c6b17c113222e01f7\trefs/tags/v25.12.6^{}"
+  ]
+}

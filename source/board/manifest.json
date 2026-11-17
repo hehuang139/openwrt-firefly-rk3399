@@ -1,0 +1,28 @@
+{
+  "linux": "6.12.112",
+  "upstream_manifest": "source/board/upstream-manifest.json",
+  "kernel_config": {
+    "path": "source/board/openwrt-25.12.6-config-6.12",
+    "url": "https://raw.githubusercontent.com/openwrt/openwrt/v25.12.6/target/linux/rockchip/armv8/config-6.12",
+    "sha256": "884e172b9049726785e4ca364f88e075b4628ecbedd95776817cfbda469a529c"
+  },
+  "board_wiring_reference": {
+    "url": "https://github.com/armbian/build/blob/8ddeef322b4706b5be19d0fb7869f107c117666d/patch/kernel/archive/rockchip64-6.12/board-firefly-rk3399-dts.patch",
+    "sha256": "e02c58fd519e7847837eb274c1e6f0302a10305d5d24ca564684c250dc5bd58e",
+    "selected_changes": [
+      "USB hub reset GPIO2_A4 only"
+    ],
+    "local_path": "source/board/armbian-firefly-board-reference.patch",
+    "not_applied": [
+      "FUSB302 fairchild compatibility: unmodified Linux6.12driver matchesfcs,fusb302",
+      "Bluetooth UART0 serdev: notneededforrouter"
+    ]
+  },
+  "assets": [
+    {
+      "path": "source/board/assets/rk3399-firefly-openwrt.dtb",
+      "bytes": 65507,
+      "sha256": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+    }
+  ]
+}

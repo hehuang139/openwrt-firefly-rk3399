@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+#include "rk3399-firefly.dts"
+
+/* Original Firefly-RK3399 DDR3: release Linux 6.12.112 wiring. */
+&work_led {
+	linux,default-trigger = "heartbeat";
+};
+
+/* The onboard USB hub must leave reset for attached USB WAN adapters. */
+&vcc5v0_host {
+	pinctrl-0 = <&vcc5v0_host_en &hub_rst>;
+};
+
+&pinctrl {
+	usb2 {
+		hub_rst: hub-rst {
+			rockchip,pins = <2 RK_PA4 RK_FUNC_GPIO &pcfg_output_high>;
+		};
+	};
+};
+
+/* Keep both SD and eMMC available; use conservative eMMC HS200. */
+&sdhci {
+	/delete-property/ mmc-hs400-1_8v;
+	/delete-property/ mmc-hs400-enhanced-strobe;
+	mmc-hs200-1_8v;
+	max-frequency = <200000000>;
+};

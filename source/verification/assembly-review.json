@@ -1,0 +1,401 @@
+{
+  "result": "PASS",
+  "count": 47,
+  "reviewed_scripts": [
+    {
+      "path": "source/prepare-imagebuilder.py",
+      "sha256": "fdd353344fc34fc9d8c652c61b6bdfd8db10431b06c49e6ff1089f487cf107a2"
+    },
+    {
+      "path": "source/build-image.sh",
+      "sha256": "34d05cd61cb5446069c49d6f542de497419d5a8435d0945997ceece1c148aa35"
+    },
+    {
+      "path": "source/assemble-release.py",
+      "sha256": "e39e6c6a0eeb5ffb079ab1ce6d48ecd278ca1894e2f95c128f929010b8ae9576"
+    }
+  ],
+  "environment": "Existing firefly-openwrt-builder:20261117 Ubuntu 22.04 container, offline --network none UID1000 isolated prepare fixture, actual bundled OpenWrt lzma/mkimage executed twice; read-only inspection of final ImageBuilder outputs/native U-Boot binaries",
+  "fixture": "work/assembly-review/fixture",
+  "findings": [],
+  "checks": [
+    {
+      "name": "prepare-python-parses",
+      "result": "PASS",
+      "evidence": "ast.parse(source/prepare-imagebuilder.py)"
+    },
+    {
+      "name": "profile-inherits-rk3399",
+      "result": "PASS",
+      "evidence": "$(Device/rk3399)\n  DEVICE_VENDOR := Firefly\n  DEVICE_MODEL := Firefly-RK3399\n  DEVICE_VARIANT := DDR3\n  DEVICE_DTS := rk3399-firefly-openwrt\n  UBOOT_DEVICE_NAME := firefly-rk3399\n  SUPPORTED_DEVICES := firefly,firefly-rk3399\n  FILESYSTEMS := ext4\n  DEVICE_PACKAGES := kmod-brcmfmac brcmfmac-nvram-4356-sdio cypress-firmware-4356-sdio"
+    },
+    {
+      "name": "profile-original-firefly-compatible",
+      "result": "PASS",
+      "evidence": "firefly,firefly-rk3399"
+    },
+    {
+      "name": "profile-explicit-original-dtb",
+      "result": "PASS",
+      "evidence": "rk3399-firefly-openwrt"
+    },
+    {
+      "name": "profile-native-bootloader-name",
+      "result": "PASS",
+      "evidence": "firefly-rk3399"
+    },
+    {
+      "name": "profile-ext4-only",
+      "result": "PASS",
+      "evidence": "ext4 root filesystem required by eMMC installer"
+    },
+    {
+      "name": "fixture-repeat-no-profile-duplication",
+      "result": "PASS",
+      "evidence": "Actual prepare script executed twice in isolated IB fixture with bundled lzma/mkimage; both exit 0"
+    },
+    {
+      "name": "fixture-repeat-no-targetinfo-duplication",
+      "result": "PASS",
+      "evidence": "Actual .targetinfo after second execution"
+    },
+    {
+      "name": "fixture-invalidates-profile-cache",
+      "result": "PASS",
+      "evidence": "Stale .profiles.mk fixture removed"
+    },
+    {
+      "name": "fixture-config-32MiB-boot",
+      "result": "PASS",
+      "evidence": "Actual fixture .config after second execution"
+    },
+    {
+      "name": "fixture-copies-frozen-native-SD-loader",
+      "result": "PASS",
+      "evidence": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+    },
+    {
+      "name": "repeat-FIT-byte-identical",
+      "result": "PASS",
+      "evidence": {
+        "sha256": "c0d989ce005a2651672c9e795fb83a658f8dda2ec974096da7e81b794261a25d",
+        "bytes": 4879628
+      }
+    },
+    {
+      "name": "fit-default-config",
+      "result": "PASS",
+      "evidence": "config-1 -> kernel-1 + fdt-1"
+    },
+    {
+      "name": "fit-architecture-and-compression",
+      "result": "PASS",
+      "evidence": "arm64/Linux/LZMA kernel; uncompressed DTB"
+    },
+    {
+      "name": "fit-load-entry-match-official-rk3399",
+      "result": "PASS",
+      "evidence": {
+        "load": "0x3200000",
+        "entry": "0x3200000",
+        "official_rk3399": "friendlyarm_nanopi-r4s-kernel.bin"
+      }
+    },
+    {
+      "name": "fit-kernel-byte-identical-to-official-raw",
+      "result": "PASS",
+      "evidence": {
+        "bytes": 17076232,
+        "sha256": "8debbe1f70d9ec9e245aa6bfc8ae5e33c231746e7bb7f1e95cabcbd80aa37b90"
+      }
+    },
+    {
+      "name": "fit-embedded-DTB-frozen-board-asset",
+      "result": "PASS",
+      "evidence": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+    },
+    {
+      "name": "fit-kernel-1-crc32",
+      "result": "PASS",
+      "evidence": "crc32"
+    },
+    {
+      "name": "fit-kernel-1-sha256",
+      "result": "PASS",
+      "evidence": "sha256"
+    },
+    {
+      "name": "fit-fdt-1-crc32",
+      "result": "PASS",
+      "evidence": "crc32"
+    },
+    {
+      "name": "fit-fdt-1-sha256",
+      "result": "PASS",
+      "evidence": "sha256"
+    },
+    {
+      "name": "built-profile-metadata",
+      "result": "PASS",
+      "evidence": {
+        "version": "25.12.6",
+        "supported_devices": [
+          "firefly,firefly-rk3399"
+        ],
+        "titles": [
+          {
+            "model": "Firefly-RK3399",
+            "variant": "DDR3",
+            "vendor": "Firefly"
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual-boot-script-header-CRC",
+      "result": "PASS",
+      "evidence": "Legacy U-Boot script image header"
+    },
+    {
+      "name": "actual-boot-script-payload-CRC",
+      "result": "PASS",
+      "evidence": "Data CRC matches exact boot.scr payload"
+    },
+    {
+      "name": "actual-boot-script-stock-source",
+      "result": "PASS",
+      "evidence": "a5193300ce215de28d2c26c93036994cf6d523857a8d5ca0fc71c99492918375"
+    },
+    {
+      "name": "boot-script-dynamic-current-medium",
+      "result": "PASS",
+      "evidence": "root partition UUID derived from bootflow devtype/devnum; kernel and root read from same medium"
+    },
+    {
+      "name": "boot-script-RK3399-UART",
+      "result": "PASS",
+      "evidence": "ttyS2 at 1500000, mmio32 ff1a0000"
+    },
+    {
+      "name": "bootstd-passes-current-device-before-source",
+      "result": "PASS",
+      "evidence": "U-Boot 2025.10 boot/bootmeth_script.c script_boot"
+    },
+    {
+      "name": "bootstd-respects-boot-target-policy",
+      "result": "PASS",
+      "evidence": "Native bootstd obtains boot_targets from environment"
+    },
+    {
+      "name": "sd-actual-native-env",
+      "result": "PASS",
+      "evidence": {
+        "soc": "rk3399",
+        "kernel_addr_r": "0x02000000",
+        "bootcmd": "bootflow scan -lb",
+        "boot_targets": "mmc1"
+      }
+    },
+    {
+      "name": "sd-required-boot-script-features",
+      "result": "PASS",
+      "evidence": [
+        "CONFIG_BOOTSTD_FULL",
+        "CONFIG_BOOTMETH_SCRIPT",
+        "CONFIG_CMD_PART",
+        "CONFIG_PARTITION_UUIDS",
+        "CONFIG_DOS_PARTITION",
+        "CONFIG_FS_EXT4",
+        "CONFIG_FIT",
+        "CONFIG_LZMA",
+        "CONFIG_CMD_SOURCE",
+        "CONFIG_CMD_BOOTM"
+      ]
+    },
+    {
+      "name": "sd-compressed-and-expanded-kernel-do-not-overlap",
+      "result": "PASS",
+      "evidence": {
+        "fit_start": "0x2000000",
+        "fit_end": "0x24a750c",
+        "expanded_start": "0x3200000",
+        "expanded_end": "0x4320000",
+        "fdt_addr_r": "0x12000000"
+      }
+    },
+    {
+      "name": "emmc-actual-native-env",
+      "result": "PASS",
+      "evidence": {
+        "soc": "rk3399",
+        "kernel_addr_r": "0x02000000",
+        "bootcmd": "bootflow scan -lb",
+        "boot_targets": "mmc1 mmc0"
+      }
+    },
+    {
+      "name": "emmc-required-boot-script-features",
+      "result": "PASS",
+      "evidence": [
+        "CONFIG_BOOTSTD_FULL",
+        "CONFIG_BOOTMETH_SCRIPT",
+        "CONFIG_CMD_PART",
+        "CONFIG_PARTITION_UUIDS",
+        "CONFIG_DOS_PARTITION",
+        "CONFIG_FS_EXT4",
+        "CONFIG_FIT",
+        "CONFIG_LZMA",
+        "CONFIG_CMD_SOURCE",
+        "CONFIG_CMD_BOOTM"
+      ]
+    },
+    {
+      "name": "emmc-compressed-and-expanded-kernel-do-not-overlap",
+      "result": "PASS",
+      "evidence": {
+        "fit_start": "0x2000000",
+        "fit_end": "0x24a750c",
+        "expanded_start": "0x3200000",
+        "expanded_end": "0x4320000",
+        "fdt_addr_r": "0x12000000"
+      }
+    },
+    {
+      "name": "build-shell-fails-on-errors",
+      "result": "PASS",
+      "evidence": "build-image.sh"
+    },
+    {
+      "name": "build-profile-and-overlay-fixed",
+      "result": "PASS",
+      "evidence": "Profile, prepared overlay, 512 MiB root"
+    },
+    {
+      "name": "build-APK-preserves-root-ownership",
+      "result": "PASS",
+      "evidence": "ImageBuilder APK runs as container root; output image root file ownership preserved"
+    },
+    {
+      "name": "built-boot-partition-FIT-matches-prepared",
+      "result": "PASS",
+      "evidence": "c0d989ce005a2651672c9e795fb83a658f8dda2ec974096da7e81b794261a25d"
+    },
+    {
+      "name": "sd-final-actual-geometry",
+      "result": "PASS",
+      "evidence": {
+        "bytes": 637534208,
+        "partitions": [
+          [
+            131,
+            65536,
+            65536
+          ],
+          [
+            131,
+            196608,
+            1048576
+          ]
+        ]
+      }
+    },
+    {
+      "name": "emmc-final-actual-geometry",
+      "result": "PASS",
+      "evidence": {
+        "bytes": 637534208,
+        "partitions": [
+          [
+            131,
+            65536,
+            65536
+          ],
+          [
+            131,
+            196608,
+            1048576
+          ]
+        ]
+      }
+    },
+    {
+      "name": "installer-final-geometry-matches-assembler",
+      "result": "PASS",
+      "evidence": "608 MiB, rootfs at LBA196608"
+    },
+    {
+      "name": "assembler-refuses-existing-output",
+      "result": "PASS",
+      "evidence": "Fresh ordinary output directory required"
+    },
+    {
+      "name": "assembler-fsck-requires-fixed-clock-and-clean-filesystems",
+      "result": "PASS",
+      "evidence": "Official IB e2fsck -fy -> -fn, E2FSCK_TIME=1792273538, clean required before final gzip"
+    },
+    {
+      "name": "assembler-actual-fsck-repaired-and-clean",
+      "result": "PASS",
+      "evidence": {
+        "filesystems": [
+          {
+            "partition": 1,
+            "repair_exit": 1,
+            "repair": "Pass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nPadding at end of inode bitmap is not set. Fix? yes\n\n\nkernel: ***** FILE SYSTEM WAS MODIFIED *****\nkernel: 13/2048 files (0.0% non-contiguous), 1335/8192 blocks\ne2fsck 1.47.3 (8-Jul-2025)\n",
+            "readonly_exit": 0,
+            "readonly": "Pass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nkernel: 13/2048 files (0.0% non-contiguous), 1335/8192 blocks\ne2fsck 1.47.3 (8-Jul-2025)\n",
+            "sha256": "1974a76ae7b01ac9db0b153ca6062a0c10dd9017bc90eed4ec65dbc1d6c8ec5e"
+          },
+          {
+            "partition": 2,
+            "repair_exit": 1,
+            "repair": "Pass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nPadding at end of inode bitmap is not set. Fix? yes\n\n\nrootfs: ***** FILE SYSTEM WAS MODIFIED *****\nrootfs: 2000/32768 files (0.0% non-contiguous), 15955/131072 blocks\ne2fsck 1.47.3 (8-Jul-2025)\n",
+            "readonly_exit": 0,
+            "readonly": "Pass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nrootfs: 2000/32768 files (0.0% non-contiguous), 15955/131072 blocks\ne2fsck 1.47.3 (8-Jul-2025)\n",
+            "sha256": "c5622ea94cd24344bd1422b6151a8bf71c53fedbc42bacc51c6b4d582ef53575"
+          }
+        ],
+        "actual_primary_superblock_clocks": [
+          {
+            "mode": "sd",
+            "partition_lba": 65536,
+            "s_wtime": 1792273538,
+            "s_lastcheck": 1792273538
+          },
+          {
+            "mode": "sd",
+            "partition_lba": 196608,
+            "s_wtime": 1792273538,
+            "s_lastcheck": 1792273538
+          },
+          {
+            "mode": "emmc",
+            "partition_lba": 65536,
+            "s_wtime": 1792273538,
+            "s_lastcheck": 1792273538
+          },
+          {
+            "mode": "emmc",
+            "partition_lba": 196608,
+            "s_wtime": 1792273538,
+            "s_lastcheck": 1792273538
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-makefile-offline-option-once",
+      "result": "PASS",
+      "evidence": "--cache-dir $(DL_DIR) $(if $(filter 1,$(FIREFLY_OFFLINE)),--no-network)"
+    },
+    {
+      "name": "offline-option-respects-explicit-1",
+      "result": "PASS",
+      "evidence": {
+        "0": "",
+        "1": "--no-network",
+        "": ""
+      }
+    }
+  ]
+}

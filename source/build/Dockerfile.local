@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: MIT
+# Optional local shortcut; Dockerfile is the standalone public definition.
+FROM firefly-rk3399-v431builder:20261117
+ENV DEBIAN_FRONTEND=noninteractive
+ARG http_proxy
+ARG https_proxy
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gawk gettext libncurses-dev unzip wget subversion libelf-dev pkg-config zstd \
+    time jq xxd gpg && rm -rf /var/lib/apt/lists/*
+RUN if ! getent group 1000 >/dev/null; then groupadd --gid 1000 builder; fi; \
+    if ! getent passwd 1000 >/dev/null; then useradd --uid 1000 --gid 1000 --create-home builder; fi
+USER 1000:1000
+WORKDIR /project
+ENV LC_ALL=C.UTF-8 LANG=C.UTF-8

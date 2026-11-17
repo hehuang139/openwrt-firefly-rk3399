@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2774,
+      "sha256": "1a5b7a04b333811864fc00cb29a38f714d6faf4e9dbd8d78554a54420439ed56"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 1626,
+      "sha256": "63507347773c13134e595e6b22e7b5ab14d8f079c8cc2a17d5d1e9a7ffa1e7fe"
+    },
+    {
+      "path": "assembly-review.json",
+      "bytes": 12635,
+      "sha256": "5ec0dfea55946beef45ab9055771df6e38e35bbed17eaadf77db80e6f0d8c444"
+    },
+    {
+      "path": "compare-rebuild.py",
+      "bytes": 6100,
+      "sha256": "8a361e125ff79d252de6071f617a6c718f428937ce0d5eee71a22cf6dc514a34"
+    },
+    {
+      "path": "fixtures.json",
+      "bytes": 1776,
+      "sha256": "e0a99596fd77bcbd5a736e2039f09c886f76e92a10b277ac9397cfb8270033c2"
+    },
+    {
+      "path": "test-verifier.py",
+      "bytes": 6610,
+      "sha256": "5a8a8b545fd281336de9bde3d49a03b1b0fc00e117b7e54504cc353164154269"
+    },
+    {
+      "path": "verify-image.py",
+      "bytes": 20015,
+      "sha256": "e0645beddac4df4e7effd18350d91fec83869ecddbcc8b8e1d09fdc016c05dfd"
+    },
+    {
+      "path": "freeze-inputs.py",
+      "bytes": 2819,
+      "sha256": "e3adb14695413de76f71c4c0d72c4c0ea66bd0d76590b0a797215014a4dec70b"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 6799,
+      "sha256": "2e1f53c059afd1b9e05f62207ec5bcda3237eab5b7c8ab68db9b62e942983656"
+    },
+    {
+      "path": "image-validation.json",
+      "bytes": 1113,
+      "sha256": "e1380abc57243931af18dd5b8b8ac3e615ca93de8c3e3baccb4391bd48c62cf6"
+    },
+    {
+      "path": "reproducibility.json",
+      "bytes": 8530,
+      "sha256": "3a258ac11bf7eb3795677cf0d451fc233b031b9038d1656db239d505478c1c51"
+    }
+  ]
+}
