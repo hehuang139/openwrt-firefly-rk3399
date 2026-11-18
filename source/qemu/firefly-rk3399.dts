@@ -1,0 +1,71 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+/dts-v1/;
+
+/* Emulated subset. Do not install this DTB on physical hardware. */
+/ {
+    compatible = "firefly,firefly-rk3399-qemu", "rockchip,rk3399";
+    model = "Firefly-RK3399 QEMU test model";
+    #address-cells = <2>;
+    #size-cells = <2>;
+    interrupt-parent = <&gic>;
+
+    aliases { serial0 = &uart2; mmc0 = &emmc; };
+    chosen { stdout-path = "serial0:1500000n8"; };
+    memory@0 { device_type = "memory"; reg = <0 0 0 0x80000000>; };
+    psci { compatible = "arm,psci-0.2"; method = "hvc"; };
+
+    cpus {
+        #address-cells = <2>;
+        #size-cells = <0>;
+        cpu@0 { device_type = "cpu"; compatible = "arm,cortex-a53"; reg = <0 0>; enable-method = "psci"; };
+        cpu@1 { device_type = "cpu"; compatible = "arm,cortex-a53"; reg = <0 1>; enable-method = "psci"; };
+        cpu@2 { device_type = "cpu"; compatible = "arm,cortex-a53"; reg = <0 2>; enable-method = "psci"; };
+        cpu@3 { device_type = "cpu"; compatible = "arm,cortex-a53"; reg = <0 3>; enable-method = "psci"; };
+        cpu@100 { device_type = "cpu"; compatible = "arm,cortex-a72"; reg = <0 0x100>; enable-method = "psci"; };
+        cpu@101 { device_type = "cpu"; compatible = "arm,cortex-a72"; reg = <0 0x101>; enable-method = "psci"; };
+    };
+
+    timer {
+        compatible = "arm,armv8-timer";
+        interrupts = <1 13 8>, <1 14 8>, <1 11 8>, <1 10 8>;
+        always-on;
+    };
+
+    gic: interrupt-controller@fee00000 {
+        compatible = "arm,gic-v3";
+        #interrupt-cells = <3>;
+        #address-cells = <0>;
+        interrupt-controller;
+        reg = <0 0xfee00000 0 0x10000>, <0 0xfef00000 0 0xc0000>;
+        interrupts = <1 9 4>;
+    };
+
+    uart2: serial@ff1a0000 {
+        compatible = "ns16550a";
+        reg = <0 0xff1a0000 0 0x100>;
+        interrupts = <0 100 4>;
+        reg-shift = <2>;
+        reg-io-width = <4>;
+        clock-frequency = <24000000>;
+        current-speed = <1500000>;
+    };
+
+    emmc_clk: clock-50000000 {
+        compatible = "fixed-clock";
+        #clock-cells = <0>;
+        clock-frequency = <50000000>;
+    };
+
+    emmc: mmc@fe330000 {
+        compatible = "arasan,sdhci-8.9a";
+        reg = <0 0xfe330000 0 0x10000>;
+        interrupts = <0 11 4>;
+        clocks = <&emmc_clk>, <&emmc_clk>;
+        clock-names = "clk_xin", "clk_ahb";
+        bus-width = <8>;
+        non-removable;
+        no-sd;
+        no-sdio;
+        no-1-8-v;
+    };
+};

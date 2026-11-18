@@ -51,6 +51,8 @@ bash source/rebuild.sh
 
 实际记录保存在 `source/{board,boot,network,flash,runtime,verification}/` 和 `outputs/test1/validation/`。覆盖设备树、两套引导器的重复构建、真实 UCI 网络逻辑、安装器普通文件写入/读回、ARM64 QEMU 用户态及最终镜像检查。QEMU 用户态不能提供 nft 的 Netfilter 内核接口，相关动态依赖已逐项检查。
 
+另有 [QEMU 板级验证](source/qemu/README.md)，使用发布版原内核和虚拟 eMMC 验证 Linux 启动与根分区读写。
+
 固定输入在全新目录完成了一次离线完整重建，TF/eMMC 的 raw、gzip 和 sysupgrade 产物 SHA256 均相同；记录见 source/verification/reproducibility.json。
 
 首板仍需执行：TF 启动、LAN DHCP/LuCI、USB 网卡千兆协商、DHCP 或 PPPoE 上网、持续下载和双向转发、断电重启、eMMC 安装与拔卡启动。吞吐量和无线稳定性以这些实测结果为准。HDMI 桌面不在本主路由固件的软件包中，管理入口为网口。

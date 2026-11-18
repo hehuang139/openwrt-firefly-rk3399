@@ -1,0 +1,14 @@
+{
+  "model": "firefly-rk3399",
+  "boot_method": "direct kernel from release FIT; emulation DTB",
+  "qemu": "QEMU emulator version 10.2.0",
+  "flash": {
+    "bytes": 637534208,
+    "readback_sha256": "00e2e63f71cac000ac3a45b32ef2acb218c0eca3f0cda301f06d410a407acfd3",
+    "virtual_capacity": 1073741824,
+    "kernel_sha256": "8debbe1f70d9ec9e245aa6bfc8ae5e33c231746e7bb7f1e95cabcbd80aa37b90"
+  },
+  "guest": "/dev/root / ext4 rw,noatime 0 0\n{\n\t\"kernel\": \"6.12.112\",\n\t\"hostname\": \"OpenWrt\",\n\t\"system\": \"ARMv8 Processor rev 4\",\n\t\"model\": \"Firefly-RK3399 QEMU test model\",\n\t\"board_name\": \"firefly,firefly-rk3399-qemu\",\n\t\"rootfs_type\": \"ext4\",\n\t\"release\": {\n\t\t\"distribution\": \"OpenWrt\",\n\t\t\"version\": \"25.12.6\",\n\t\t\"firmware_url\": \"https://downloads.openwrt.org/\",\n\t\t\"revision\": \"r33311-981c978eff\",\n\t\t\"target\": \"rockchip/armv8\",\n\t\t\"description\": \"OpenWrt 25.12.6 r33311-981c978eff\",\n\t\t\"builddate\": \"1792273538\"\n\t}\n}\n",
+  "cold_boot_marker": "emmc-write-ok\n",
+  "post_boot_sha256": "073248245c083c372df33fe02f5afc8d3a3919680b982085124a7bd13433461e"
+}
