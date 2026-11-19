@@ -1,0 +1,189 @@
+{
+  "version": "25.12.6",
+  "revision": "r33311-981c978eff",
+  "kernel_version": "6.12.112",
+  "kernel_vermagic": "5eacf764ba9415e5d7ff4aecb2e45c4d",
+  "board": "firefly,firefly-rk3399",
+  "target": "rockchip/armv8",
+  "rootfs_type": "ext4",
+  "kernel": {
+    "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/vmlinux",
+    "bytes": 17076232,
+    "sha256": "8debbe1f70d9ec9e245aa6bfc8ae5e33c231746e7bb7f1e95cabcbd80aa37b90"
+  },
+  "dtb": {
+    "path": "source/board/assets/rk3399-firefly-openwrt.dtb",
+    "bytes": 65507,
+    "sha256": "f7491b136b13f57315263b9393595046df08d7d3ca00220644d77c1342a00178"
+  },
+  "files": [
+    {
+      "path": "etc/hotplug.d/net/95-firefly-usb-wan",
+      "bytes": 114,
+      "sha256": "5ca461488dcec04e0030357703ffbcf8b6f25bca080c33b0bb0efc0ec33d1ca7"
+    },
+    {
+      "path": "etc/uci-defaults/99-firefly-router",
+      "bytes": 3803,
+      "sha256": "3dfd60ea990e25552c83b7dd25c2891fa7fd929a05986168eb42711d9160abf8"
+    },
+    {
+      "path": "usr/sbin/firefly-usb-wan",
+      "bytes": 2856,
+      "sha256": "f8064dec31c1932ec149788ceac464e709d7c58edddc96178c1d368dd09be34a"
+    },
+    {
+      "path": "usr/sbin/firefly-install-emmc",
+      "bytes": 15750,
+      "sha256": "d797aa8b00c5f489b6935e2cc67fd9c1de47baa2db8cac7d196d61087d545652"
+    },
+    {
+      "path": "lib/firmware/brcm/brcmfmac4356-sdio.firefly,firefly-rk3399.txt",
+      "symlink": "brcmfmac4356-sdio.AP6356S.txt"
+    }
+  ],
+  "required_packages": [
+    "luci-ssl",
+    "luci-i18n-base-zh-cn",
+    "luci-i18n-firewall-zh-cn",
+    "kmod-usb-net-rtl8152",
+    "kmod-usb-net-asix-ax88179",
+    "kmod-usb-net-asix",
+    "kmod-usb-net-cdc-ether",
+    "kmod-usb-net-cdc-ncm",
+    "ethtool",
+    "usbutils",
+    "kmod-brcmfmac",
+    "brcmfmac-nvram-4356-sdio",
+    "cypress-firmware-4356-sdio",
+    "wpad-basic-mbedtls",
+    "python3",
+    "block-mount"
+  ],
+  "modes": {
+    "sd": {
+      "disk_signature": "fc339901",
+      "partitions": [
+        {
+          "type": 131,
+          "start_lba": 65536,
+          "sectors": 65536
+        },
+        {
+          "type": 131,
+          "start_lba": 196608,
+          "sectors": 1048576
+        }
+      ],
+      "bootloader": {
+        "path": "source/boot/assets/sd/u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+      },
+      "boot_script": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/openwrt-25.12.6-rockchip-armv8-firefly_firefly-rk3399-ext4-sysupgrade.img.gz.boot/boot.scr",
+        "bytes": 884,
+        "sha256": "a5193300ce215de28d2c26c93036994cf6d523857a8d5ca0fc71c99492918375"
+      },
+      "fit": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/firefly_firefly-rk3399-kernel.bin",
+        "bytes": 4879628,
+        "sha256": "226e47211c0d3f0bfc598ffe1127c3a3bace969392626cfb3eb42ceeca5e5a75"
+      },
+      "has_metadata": false
+    },
+    "sd-sysupgrade": {
+      "disk_signature": "fc339901",
+      "partitions": [
+        {
+          "type": 131,
+          "start_lba": 65536,
+          "sectors": 65536
+        },
+        {
+          "type": 131,
+          "start_lba": 196608,
+          "sectors": 1048576
+        }
+      ],
+      "bootloader": {
+        "path": "source/boot/assets/sd/u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "074afaeec584916a1d7d939b4d46a328c804c5e0754e81207ed656874f48c23c"
+      },
+      "boot_script": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/openwrt-25.12.6-rockchip-armv8-firefly_firefly-rk3399-ext4-sysupgrade.img.gz.boot/boot.scr",
+        "bytes": 884,
+        "sha256": "a5193300ce215de28d2c26c93036994cf6d523857a8d5ca0fc71c99492918375"
+      },
+      "fit": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/firefly_firefly-rk3399-kernel.bin",
+        "bytes": 4879628,
+        "sha256": "226e47211c0d3f0bfc598ffe1127c3a3bace969392626cfb3eb42ceeca5e5a75"
+      },
+      "has_metadata": true
+    },
+    "emmc": {
+      "disk_signature": "fc339902",
+      "partitions": [
+        {
+          "type": 131,
+          "start_lba": 65536,
+          "sectors": 65536
+        },
+        {
+          "type": 131,
+          "start_lba": 196608,
+          "sectors": 1048576
+        }
+      ],
+      "bootloader": {
+        "path": "source/boot/assets/emmc/u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f"
+      },
+      "boot_script": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/openwrt-25.12.6-rockchip-armv8-firefly_firefly-rk3399-ext4-sysupgrade.img.gz.boot/boot.scr",
+        "bytes": 884,
+        "sha256": "a5193300ce215de28d2c26c93036994cf6d523857a8d5ca0fc71c99492918375"
+      },
+      "fit": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/firefly_firefly-rk3399-kernel.bin",
+        "bytes": 4879628,
+        "sha256": "226e47211c0d3f0bfc598ffe1127c3a3bace969392626cfb3eb42ceeca5e5a75"
+      },
+      "has_metadata": false
+    },
+    "emmc-sysupgrade": {
+      "disk_signature": "fc339902",
+      "partitions": [
+        {
+          "type": 131,
+          "start_lba": 65536,
+          "sectors": 65536
+        },
+        {
+          "type": 131,
+          "start_lba": 196608,
+          "sectors": 1048576
+        }
+      ],
+      "bootloader": {
+        "path": "source/boot/assets/emmc/u-boot-rockchip.bin",
+        "bytes": 9457664,
+        "sha256": "cb2c57287af28b1abc4cb93be985a9c0afff1d6b9553429c2b9392f4b1577e8f"
+      },
+      "boot_script": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/tmp/openwrt-25.12.6-rockchip-armv8-firefly_firefly-rk3399-ext4-sysupgrade.img.gz.boot/boot.scr",
+        "bytes": 884,
+        "sha256": "a5193300ce215de28d2c26c93036994cf6d523857a8d5ca0fc71c99492918375"
+      },
+      "fit": {
+        "path": "work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64/build_dir/target-aarch64_generic_musl/linux-rockchip_armv8/firefly_firefly-rk3399-kernel.bin",
+        "bytes": 4879628,
+        "sha256": "226e47211c0d3f0bfc598ffe1127c3a3bace969392626cfb3eb42ceeca5e5a75"
+      },
+      "has_metadata": true
+    }
+  }
+}

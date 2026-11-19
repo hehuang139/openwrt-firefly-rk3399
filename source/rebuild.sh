@@ -5,7 +5,7 @@ set -euo pipefail
 project=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 cd "$project"
 [[ ! -e work && ! -L work ]] || { echo 'Use a freshly extracted source kit without work/.' >&2; exit 1; }
-[[ ! -e outputs/test1 && ! -L outputs/test1 ]] || { echo 'outputs/test1 already exists.' >&2; exit 1; }
+[[ ! -e outputs/vsel1-test2 && ! -L outputs/vsel1-test2 ]] || { echo 'outputs/vsel1-test2 already exists.' >&2; exit 1; }
 image=${FIREFLY_BUILD_IMAGE:-firefly-openwrt-builder:20261117}
 ib=work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64
 archive=downloads/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64.tar.zst
@@ -32,5 +32,7 @@ mkdir -p work/image-files/lib/firmware/brcm
 ln -s brcmfmac4356-sdio.AP6356S.txt \
   work/image-files/lib/firmware/brcm/brcmfmac4356-sdio.firefly,firefly-rk3399.txt
 FIREFLY_BUILD_IMAGE="$image" FIREFLY_OFFLINE=1 bash source/build-image.sh > logs/imagebuilder-build.log 2>&1
-python3 source/assemble-release.py "$ib" outputs/test1 > logs/assemble-release.log 2>&1
-echo 'Images ready in outputs/test1. See README.md for independent verification.'
+python3 source/assemble-release.py "$ib" outputs/vsel1-test2 > logs/assemble-release.log 2>&1
+docker run --rm --network none --user 0:0 -v "$project:/project" -w /project "$image" \
+  bash source/verification/verify-vsel1.sh > logs/verify-vsel1.log 2>&1
+echo 'Images ready in outputs/vsel1-test2. See README.md for independent verification.'

@@ -129,6 +129,28 @@ def fdt(data):
 def strings(value): return value.rstrip(b'\0').decode().split('\0')
 
 
+def firefly_power_check(nodes):
+    for addr, compat, name, consumers in [
+        (0x40, 'silergy,syr827', 'vdd_cpu_b',
+         [('/cpus/cpu@100', 'cpu-supply'), ('/cpus/cpu@101', 'cpu-supply')]),
+        (0x41, 'silergy,syr828', 'vdd_gpu', [('/gpu@ff9a0000', 'mali-supply')]),
+    ]:
+        path = f'/i2c@ff3c0000/regulator@{addr:x}'
+        rail = nodes[path]
+        reg = struct.pack('>I', addr)
+        check(f'firefly-rail-identity:{name}', rail.get('reg') == reg
+              and strings(rail['compatible']) == [compat]
+              and strings(rail['regulator-name']) == [name], addr)
+        phandle = rail.get('phandle')
+        check(f'firefly-rail-consumers:{name}', bool(phandle)
+              and all(nodes[parent].get(key) == phandle for parent, key in consumers), consumers)
+        selector, = struct.unpack('>I', rail['fcs,suspend-voltage-selector'])
+        check(f'firefly-suspend-bank:{name}', selector == 1, selector)
+        state = nodes[path + '/regulator-state-mem']
+        check(f'firefly-suspend-off:{name}', state.get('regulator-off-in-suspend') == b''
+              and 'regulator-on-in-suspend' not in state, sorted(state))
+
+
 def fit_check(path, inputs):
     nodes = fdt(path.read_bytes())
     configs = nodes['/configurations']
@@ -165,6 +187,7 @@ def fit_check(path, inputs):
             compatible = strings(dtb_nodes['/']['compatible'])
             check('dtb-original-firefly-board', inputs['board'] in compatible and 'rockchip,rk3399' in compatible, compatible)
             check('dtb-original-model', 'Firefly' in strings(dtb_nodes['/']['model'])[0], strings(dtb_nodes['/']['model']))
+            firefly_power_check(dtb_nodes)
         actual = {'bytes': len(payload), 'sha256': hashlib.sha256(payload).hexdigest()}
         check('fit-' + role + '-fixed-input', actual['bytes'] == inputs[role]['bytes'] and actual['sha256'] == inputs[role]['sha256'], actual)
         result[role] = actual

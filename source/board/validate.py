@@ -14,6 +14,10 @@ def main():
         if not condition:raise AssertionError(name+': '+str(value))
         checks.append({'name':name,'result':'PASS','value':value})
     check('original-Firefly-compatible',get('/','compatible')=='firefly,firefly-rk3399 rockchip,rk3399')
+    for addr in ['40', '41']:
+        rail = '/i2c@ff3c0000/regulator@' + addr
+        check('suspend-bank:' + addr, get(rail, 'fcs,suspend-voltage-selector', 'u') == '1')
+        check('suspend-off:' + addr, get(rail + '/regulator-state-mem', 'regulator-off-in-suspend', 'x') == '')
     check('UART2-1500000',get('/chosen','stdout-path')=='serial2:1500000n8')
     check('Linux-SD-alias',get('/aliases','mmc1')=='/mmc@fe320000')
     check('Linux-eMMC-alias',get('/aliases','mmc2')=='/mmc@fe330000')

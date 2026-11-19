@@ -1,5 +1,7 @@
 # Firefly RK3399 · OpenWrt 25.12.6
 
+> **原版 DDR3 Rev 1.0：请使用 VSEL1 test2。** 旧 test1 的 TF、eMMC 和两份 sysupgrade 中，Linux FIT 的 CPU 休眠 bank 都是 0。相同接线在 Ubuntu 实板上已复现启动故障。详见 [VSEL 修复、校验和下载说明](VSEL.md)。
+
 原版 **Firefly-RK3399 DDR3** 的主路由固件。2026-11-17 核对并选用 OpenWrt 最新稳定版 **25.12.6**，官方内核 **6.12.112**、匹配 ABI 驱动和 APK 软件包；新增原板设备树、原生 DDR3 U-Boot、USB WAN 选择和 eMMC 安装器。当前发布代号 `test1`。
 
 ## 下载与开始

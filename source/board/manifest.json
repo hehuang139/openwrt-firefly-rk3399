@@ -22,7 +22,7 @@
     {
       "path": "source/board/assets/rk3399-firefly-openwrt.dtb",
       "bytes": 65507,
-      "sha256": "6c49750c84089def462b8d01479eae9789277941d05c5a8fb49b5cd3cc62ea40"
+      "sha256": "f7491b136b13f57315263b9393595046df08d7d3ca00220644d77c1342a00178"
     }
   ]
 }
