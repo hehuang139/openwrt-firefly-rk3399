@@ -46,13 +46,9 @@ ImageBuilder 不能像完整源码树一样自动编译新内核。本项目增�
 
 ## 4. 先重建固定版本
 
-推荐 x86-64 Linux、Docker、约 20 GiB 可用空间；主机安装 python3、tar、zstd。从 [Release](https://github.com/hehuang139/openwrt-firefly-rk3399/releases/tag/v25.12.6-firefly-test1) 下载完整 source.tar.gz（含固定工具和软件包缓存），解压到新的可写目录，保留软链接。进入项目根目录：
+推荐 x86-64 Linux、Docker、约 20 GiB 可用空间；主机安装 python3、tar、zstd。从 [Release](https://github.com/hehuang139/openwrt-firefly-rk3399/releases/tag/v25.12.6-firefly-vsel1-test2) 下载完整 `openwrt-firefly-rk3399-vsel1-test2-source.tar.gz`（含固定工具和软件包缓存），解压到新的可写目录，保留软链接。进入项目根目录：
 
 ```sh
-# 如果需要代理，在执行前设置。
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=http://127.0.0.1:7890
-
 docker build --network host \
   --build-arg http_proxy --build-arg https_proxy \
   -t firefly-openwrt-builder:20261117 \
@@ -62,7 +58,7 @@ python3 source/check-inputs.py
 bash source/rebuild.sh
 ```
 
-rebuild.sh 要求新目录中没有 work/ 和 outputs/test1/，避免旧中间文件掩盖问题。日志写到 logs/，产物在 outputs/test1/。
+rebuild.sh 要求新目录中没有 work/ 和 outputs/vsel1-test2/，避免旧中间文件掩盖问题。日志写到 logs/，产物在 outputs/vsel1-test2/。
 
 脚本实际执行：
 
@@ -110,7 +106,7 @@ python3 source/assemble-release.py \
   work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64 outputs/lan60
 ```
 
-把新 TF 镜像写入卡，电脑自动取地址后访问 `192.168.60.1`。实验目录和镜像内部的固定 test1 名称是两回事；正式发布新版本时，需要统一修改脚本中的版本/产物名称，保存变更和新的验证基线。原有 pins 会拒绝发生变化的网络脚本，这是提醒你审阅差异。
+把新 TF 镜像写入卡，电脑自动取地址后访问 `192.168.60.1`。正式发布新版本时，需要统一修改脚本中的版本和产物名称，保存变更和新的验证基线。原有 pins 会拒绝发生变化的网络脚本，这是提醒你审阅差异。
 
 ## 6. 设备树怎么改
 
@@ -166,11 +162,11 @@ docker run --rm --network none --user 0:0 \
   -v "$PWD:/project" -w /project firefly-openwrt-builder:20261117 \
   python3 source/verification/verify-image.py \
   --mode sd \
-  --image outputs/test1/openwrt-25.12.6-firefly-rk3399-sd-test1.img.gz \
+  --image outputs/vsel1-test2/openwrt-25.12.6-firefly-rk3399-sd-vsel1-test2.img.gz \
   --inputs source/verification/inputs.json \
   --imagebuilder work/openwrt-imagebuilder-25.12.6-rockchip-armv8.Linux-x86_64 \
   --scratch work/image-verification \
-  --report outputs/test1/validation/sd-image.json
+  --report outputs/vsel1-test2/sd-validation.json
 ```
 
 检查器按固定基线判断产物是否一致。你主动修改内核、DTB 或 overlay 后，需要审阅并更新相应 pin，不能只改哈希让检查变绿。
@@ -186,7 +182,7 @@ docker run --rm --network none --user 0:0 \
 | LAN 正常而 WAN 不通 | USB3 链路/供电、驱动、WAN 设备、DHCP/PPPoE、VLAN、NAT/DNS |
 | 大流量掉线 | 供电、温度、网卡驱动、线材、内核日志 |
 
-本项目还做了全新目录离线重建，并比较 TF/eMMC 的 raw、gzip、sysupgrade、启动器、DTB、FIT 和 1989 项根文件系统记录，17 项比较通过。装配中的 e2fsck 使用实际生效的 `E2FSCK_TIME=1792273538` 固定时间戳；只设置 SOURCE_DATE_EPOCH 不会固定这个工具写入的时间。
+test1 做过全新目录离线重建，并比较 TF/eMMC 的 raw、gzip、sysupgrade、启动器、DTB、FIT 和 1989 项根文件系统记录，17 项比较通过。VSEL1 test2 复用同一批固定输入和启动器，重新运行离线 ImageBuilder 与镜像装配，并对四份产物运行 `source/verification/verify-vsel1.sh`。装配中的 e2fsck 使用实际生效的 `E2FSCK_TIME=1792273538` 固定时间戳；只设置 SOURCE_DATE_EPOCH 不会固定这个工具写入的时间。
 
 ## 10. 如果需要完整源码编译
 

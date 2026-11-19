@@ -1014,6 +1014,16 @@
       "path": "source/boot/trusted-firmware-a-v2.13.tar.gz",
       "bytes": 10671703,
       "sha256": "afb5c408392fcec840bd30de9b02a236b0108142024f9853b542b596b0d894e3"
+    },
+    {
+      "path": "source/verification/verify-vsel1.sh",
+      "bytes": 561,
+      "sha256": "667652724a9a131945122ff7a1bd70450d79218226762660e49a9b3fd9b57f0f"
+    },
+    {
+      "path": "source/verification/inputs-vsel1-test2.json",
+      "bytes": 6799,
+      "sha256": "a3e9390c9c2f41d98c27c6976b075e9443c8fde9834b8546ad182e0bde85af2a"
     }
   ]
 }

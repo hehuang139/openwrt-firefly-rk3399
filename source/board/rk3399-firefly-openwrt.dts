@@ -26,3 +26,8 @@
 	mmc-hs200-1_8v;
 	max-frequency = <200000000>;
 };
+
+/* Rev 1.0 DDR3 CPU_B_SLEEP_H is low at boot: VSEL0 is the run bank. */
+&vdd_cpu_b {
+	fcs,suspend-voltage-selector = <1>;
+};

@@ -72,7 +72,7 @@ def main():
     (out/'filesystem-checks.json').write_text(json.dumps(filesystems,indent=2)+'\n')
     result={'board':'firefly-rk3399','version':'25.12.6','kernel':'6.12.112','source_image':pin(original),'partitions':partitions,'modes':{}}
     for mode,signature in [('sd',0xfc339901),('emmc',0xfc339902)]:
-        name='openwrt-25.12.6-firefly-rk3399-'+mode+'-test1.img'
+        name='openwrt-25.12.6-firefly-rk3399-'+mode+'-vsel1-test2.img'
         target=out/name
         shutil.copyfile(raw,target)
         boot=HERE/'boot/assets'/mode/'u-boot-rockchip.bin'
@@ -96,7 +96,7 @@ def main():
             h=hashlib.sha256();size=0
             for block in iter(lambda:stream.read(8388608),b''):h.update(block);size+=len(block)
         assert size==target.stat().st_size and h.hexdigest()==sha(target)
-        upgrade=out/('openwrt-25.12.6-firefly-rk3399-'+mode+'-sysupgrade-test1.img.gz')
+        upgrade=out/('openwrt-25.12.6-firefly-rk3399-'+mode+'-sysupgrade-vsel1-test2.img.gz')
         shutil.copyfile(factory,upgrade)
         subprocess.run([str(ib/'staging_dir/host/bin/fwtool'),'-I',str(metadata),str(upgrade)],check=True,env=env)
         result['modes'][mode]={'disk_signature':f'{signature:08x}','image':pin(target),'compressed':pin(factory),'sysupgrade':pin(upgrade),'bootloader':pin(boot)}
