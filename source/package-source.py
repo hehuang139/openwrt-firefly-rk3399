@@ -6,7 +6,7 @@ from pathlib import Path
 root=Path(__file__).resolve().parent.parent
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('output',type=Path);a=p.parse_args()
 assert not a.output.exists() and not a.output.is_symlink()
-selected=['README.md','INSTALL.md','DEVELOPMENT.md','SOURCE-NOTICE.md','LICENSE','.gitignore','source','downloads']
+selected=['README.md','INSTALL.md','DEVELOPMENT.md','SOURCE-NOTICE.md','VSEL.md','LICENSE','.gitignore','source','downloads']
 entries=[]
 for name in selected:
     path=root/name
